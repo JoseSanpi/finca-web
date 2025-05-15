@@ -7,6 +7,12 @@
     <meta name="description" content="" />
     <meta name="keywords" content="" />
 
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
     <!-- Favicons -->
     <link href="assets/img/favicon.png" rel="icon" />
     <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
@@ -290,892 +296,883 @@
         <!-- End Section Title -->
 
         <div class="container">
-          <div
-            class="isotope-layout"
-            data-default-filter="*"
-            data-layout="fitRows"
-            data-sort="original-order"
-          >
-            <ul
-              class="portfolio-filters isotope-filters"
-              data-aos="fade-up"
-              data-aos-delay="100"
-            >
-              <li data-filter="*" class="filter-active">All</li>
-              <li data-filter=".filter-outdoors">Outdoors</li>
-              <li data-filter=".filter-livingroom">Living room</li>
-              <li data-filter=".filter-kitchen">Kitchen</li>
-              <li data-filter=".filter-diningroom">Dining rooms</li>
-              <li data-filter=".filter-bedroom">Bedrooms</li>
-              <li data-filter=".filter-bathroom">Bathrooms</li>
-              <li data-filter=".filter-swimmingpool">Swimming pool</li>
-              <li data-filter=".filter-sportsarea">Sports area</li>
-              <li data-filter=".filter-kidscastle">Kids castle</li>
-            </ul>
-            <!-- End Portfolio Filters -->
-
+          <div class="portfolio-desktop">
             <div
-              class="row gy-4 isotope-container"
-              data-aos="fade-up"
-              data-aos-delay="200"
+              class="isotope-layout"
+              data-default-filter="*"
+              data-layout="fitRows"
+              data-sort="original-order"
             >
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-outdoors"
+              <ul
+                class="portfolio-filters isotope-filters"
+                data-aos="fade-up"
+                data-aos-delay="100"
               >
-                <a
-                  href="assets/img/outdoors/Outdoors1.webp"
-                  title="Outdoors"
-                  data-gallery="portfolio-gallery-outdoors"
-                  class="glightbox preview link"
-                >
-                  <img
-                    src="assets/img/outdoors/Outdoors1_thumb.webp"
-                    class="img-fluid"
-                    alt=""
-                    loading="lazy"
-                  />
-                </a>
-                <div class="portfolio-info">
-                  <h4>Outdoors</h4>
-                  <p>Aerial outdoors</p>
-                </div>
-              </div>
+                <li data-filter="*" class="filter-active">All</li>
+                <li data-filter=".filter-outdoors">Outdoors</li>
+                <li data-filter=".filter-livingroom">Living room</li>
+                <li data-filter=".filter-kitchen">Kitchen</li>
+                <li data-filter=".filter-diningroom">Dining rooms</li>
+                <li data-filter=".filter-bedroom">Bedrooms</li>
+                <li data-filter=".filter-bathroom">Bathrooms</li>
+                <li data-filter=".filter-swimmingpool">Swimming pool</li>
+                <li data-filter=".filter-sportsarea">Sports area</li>
+                <li data-filter=".filter-kidscastle">Kids castle</li>
+              </ul>
+              <!-- End Portfolio Filters -->
 
               <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-outdoors"
+                class="row gy-4 isotope-container"
+                data-aos="fade-up"
+                data-aos-delay="200"
               >
-                <a
-                  href="assets/img/outdoors/Outdoors2.webp"
-                  title="Outdoors"
-                  data-gallery="portfolio-gallery-outdoors"
-                  class="glightbox preview-link"
+                <div
+                  class="col-lg-4 col-md-6 portfolio-item isotope-item filter-outdoors"
                 >
-                  <img
-                    src="assets/img/outdoors/Outdoors2_thumb.webp"
-                    class="img-fluid"
-                    alt=""
-                    loading="lazy"
-                /></a>
-                <div class="portfolio-info">
-                  <h4>Outdoors</h4>
-                  <p>Aerial outdoors</p>
+                  <a
+                    href="assets/img/outdoors/Outdoors1.webp"
+                    data-gallery="portfolio-gallery-outdoors"
+                    class="glightbox preview link"
+                  >
+                    <img
+                      src="assets/img/outdoors/Outdoors1_thumb.webp"
+                      class="img-fluid"
+                      alt=""
+                      loading="lazy"
+                    />
+                  </a>
+                  <div class="portfolio-info">
+                    <h4>Outdoors</h4>
+                    <p>Aerial outdoors</p>
+                  </div>
                 </div>
-              </div>
 
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-outdoors"
-              >
-                <a
-                  href="assets/img/outdoors/Outdoors3.webp"
-                  title="Outdoors"
-                  data-gallery="portfolio-gallery-outdoors"
-                  class="glightbox preview-link"
+                <div
+                  class="col-lg-4 col-md-6 portfolio-item isotope-item filter-outdoors"
                 >
-                  <img
-                    src="assets/img/outdoors/Outdoors3_thumb.webp"
-                    class="img-fluid"
-                    alt=""
-                    loading="lazy"
-                /></a>
-                <div class="portfolio-info">
-                  <h4>Outdoors</h4>
-                  <p>Aerial outdoors</p>
+                  <a
+                    href="assets/img/outdoors/Outdoors2.webp"
+                    data-gallery="portfolio-gallery-outdoors"
+                    class="glightbox preview-link"
+                  >
+                    <img
+                      src="assets/img/outdoors/Outdoors2_thumb.webp"
+                      class="img-fluid"
+                      alt=""
+                      loading="lazy"
+                  /></a>
+                  <div class="portfolio-info">
+                    <h4>Outdoors</h4>
+                    <p>Aerial outdoors</p>
+                  </div>
                 </div>
-              </div>
 
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-livingroom"
-              >
-                <a
-                  href="assets/img/livingroom/livingroom1.webp"
-                  title="Livingroom"
-                  data-gallery="portfolio-gallery-livingroom"
-                  class="glightbox preview-link"
+                <div
+                  class="col-lg-4 col-md-6 portfolio-item isotope-item filter-outdoors"
                 >
-                  <img
-                    src="assets/img/livingroom/livingroom1_thumb.webp"
-                    class="img-fluid"
-                    alt=""
-                    loading="lazy"
-                  />
-                </a>
-                <div class="portfolio-info">
-                  <h4>Living room</h4>
-                  <p>Main living room</p>
+                  <a
+                    href="assets/img/outdoors/Outdoors3.webp"
+                    data-gallery="portfolio-gallery-outdoors"
+                    class="glightbox preview-link"
+                  >
+                    <img
+                      src="assets/img/outdoors/Outdoors3_thumb.webp"
+                      class="img-fluid"
+                      alt=""
+                      loading="lazy"
+                  /></a>
+                  <div class="portfolio-info">
+                    <h4>Outdoors</h4>
+                    <p>Aerial outdoors</p>
+                  </div>
                 </div>
-              </div>
 
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-livingroom"
-              >
-                <a
-                  href="assets/img/livingroom/livingroom2.webp"
-                  title="Living room"
-                  data-gallery="portfolio-gallery-livingroom"
-                  class="glightbox preview-link"
+                <div
+                  class="col-lg-4 col-md-6 portfolio-item isotope-item filter-livingroom"
                 >
-                  <img
-                    src="assets/img/livingroom/livingroom2_thumb.webp"
-                    class="img-fluid"
-                    alt=""
-                    loading="lazy"
-                  />
-                </a>
-                <div class="portfolio-info">
-                  <h4>Living room</h4>
-                  <p>Main living room</p>
+                  <a
+                    href="assets/img/livingroom/livingroom1.webp"
+                    data-gallery="portfolio-gallery-livingroom"
+                    class="glightbox preview-link"
+                  >
+                    <img
+                      src="assets/img/livingroom/livingroom1_thumb.webp"
+                      class="img-fluid"
+                      alt=""
+                      loading="lazy"
+                    />
+                  </a>
+                  <div class="portfolio-info">
+                    <h4>Living room</h4>
+                    <p>Main living room</p>
+                  </div>
                 </div>
-              </div>
 
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-livingroom"
-              >
-                <a
-                  href="assets/img/livingroom/livingroom3.webp"
-                  title="Living room"
-                  data-gallery="portfolio-gallery-livingroom"
-                  class="glightbox preview-link"
+                <div
+                  class="col-lg-4 col-md-6 portfolio-item isotope-item filter-livingroom"
                 >
-                  <img
-                    src="assets/img/livingroom/livingroom3_thumb.webp"
-                    class="img-fluid"
-                    alt=""
-                    loading="lazy"
-                  />
-                </a>
-                <div class="portfolio-info">
-                  <h4>Living room</h4>
-                  <p>Main living room</p>
+                  <a
+                    href="assets/img/livingroom/livingroom2.webp"
+                    data-gallery="portfolio-gallery-livingroom"
+                    class="glightbox preview-link"
+                  >
+                    <img
+                      src="assets/img/livingroom/livingroom2_thumb.webp"
+                      class="img-fluid"
+                      alt=""
+                      loading="lazy"
+                    />
+                  </a>
+                  <div class="portfolio-info">
+                    <h4>Living room</h4>
+                    <p>Main living room</p>
+                  </div>
                 </div>
-              </div>
 
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-kitchen"
-              >
-                <a
-                  href="assets/img/kitchen/Kitchen1.webp"
-                  title="Kitchen"
-                  data-gallery="portfolio-gallery-kitchen"
-                  class="glightbox preview-link"
+                <div
+                  class="col-lg-4 col-md-6 portfolio-item isotope-item filter-livingroom"
                 >
-                  <img
-                    src="assets/img/kitchen/Kitchen1_thumb.webp"
-                    class="img-fluid"
-                    alt=""
-                    loading="lazy"
-                  />
-                </a>
-                <div class="portfolio-info">
-                  <h4>Kitchen</h4>
-                  <p>Main kitchen</p>
+                  <a
+                    href="assets/img/livingroom/livingroom3.webp"
+                    data-gallery="portfolio-gallery-livingroom"
+                    class="glightbox preview-link"
+                  >
+                    <img
+                      src="assets/img/livingroom/livingroom3_thumb.webp"
+                      class="img-fluid"
+                      alt=""
+                      loading="lazy"
+                    />
+                  </a>
+                  <div class="portfolio-info">
+                    <h4>Living room</h4>
+                    <p>Main living room</p>
+                  </div>
                 </div>
-              </div>
 
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-kitchen"
-              >
-                <a
-                  href="assets/img/kitchen/Kitchen2.webp"
-                  title="Kitchen"
-                  data-gallery="portfolio-gallery-kitchen"
-                  class="glightbox preview-link"
+                <div
+                  class="col-lg-4 col-md-6 portfolio-item isotope-item filter-kitchen"
                 >
-                  <img
-                    src="assets/img/kitchen/Kitchen2_thumb.webp"
-                    class="img-fluid"
-                    alt=""
-                    loading="lazy"
-                  />
-                </a>
-                <div class="portfolio-info">
-                  <h4>Kitchen</h4>
-                  <p>Main kitchen</p>
+                  <a
+                    href="assets/img/kitchen/Kitchen1.webp"
+                    data-gallery="portfolio-gallery-kitchen"
+                    class="glightbox preview-link"
+                  >
+                    <img
+                      src="assets/img/kitchen/Kitchen1_thumb.webp"
+                      class="img-fluid"
+                      alt=""
+                      loading="lazy"
+                    />
+                  </a>
+                  <div class="portfolio-info">
+                    <h4>Kitchen</h4>
+                    <p>Main kitchen</p>
+                  </div>
                 </div>
-              </div>
 
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-kitchen"
-              >
-                <a
-                  href="assets/img/kitchen/Kitchen3.webp"
-                  title="Kitchen"
-                  data-gallery="portfolio-gallery-kitchen"
-                  class="glightbox preview-link"
+                <div
+                  class="col-lg-4 col-md-6 portfolio-item isotope-item filter-kitchen"
                 >
-                  <img
-                    src="assets/img/kitchen/Kitchen3_thumb.webp"
-                    class="img-fluid"
-                    alt=""
-                    loading="lazy"
-                  />
-                </a>
-                <div class="portfolio-info">
-                  <h4>Kitchen</h4>
-                  <p>Main kitchen</p>
+                  <a
+                    href="assets/img/kitchen/Kitchen2.webp"
+                    data-gallery="portfolio-gallery-kitchen"
+                    class="glightbox preview-link"
+                  >
+                    <img
+                      src="assets/img/kitchen/Kitchen2_thumb.webp"
+                      class="img-fluid"
+                      alt=""
+                      loading="lazy"
+                    />
+                  </a>
+                  <div class="portfolio-info">
+                    <h4>Kitchen</h4>
+                    <p>Main kitchen</p>
+                  </div>
                 </div>
-              </div>
 
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-diningroom"
-              >
-                <a
-                  href="assets/img/diningroom/Diningroom1.webp"
-                  title="Main dining room"
-                  data-gallery="portfolio-gallery-diningroom"
-                  class="glightbox preview-link"
+                <div
+                  class="col-lg-4 col-md-6 portfolio-item isotope-item filter-kitchen"
                 >
-                  <img
-                    src="assets/img/diningroom/Diningroom1_thumb.webp"
-                    class="img-fluid"
-                    alt=""
-                    loading="lazy"
-                  />
-                </a>
-                <div class="portfolio-info">
-                  <h4>Dining room</h4>
-                  <p>Main dining room</p>
+                  <a
+                    href="assets/img/kitchen/Kitchen3.webp"
+                    data-gallery="portfolio-gallery-kitchen"
+                    class="glightbox preview-link"
+                  >
+                    <img
+                      src="assets/img/kitchen/Kitchen3_thumb.webp"
+                      class="img-fluid"
+                      alt=""
+                      loading="lazy"
+                    />
+                  </a>
+                  <div class="portfolio-info">
+                    <h4>Kitchen</h4>
+                    <p>Main kitchen</p>
+                  </div>
                 </div>
-              </div>
 
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-diningroom"
-              >
-                <a
-                  href="assets/img/diningroom/Diningroom2.webp"
-                  title="Main dining room"
-                  data-gallery="portfolio-gallery-diningroom"
-                  class="glightbox preview-link"
+                <div
+                  class="col-lg-4 col-md-6 portfolio-item isotope-item filter-diningroom"
                 >
-                  <img
-                    src="assets/img/diningroom/Diningroom2_thumb.webp"
-                    class="img-fluid"
-                    alt=""
-                    loading="lazy"
-                  />
-                </a>
-                <div class="portfolio-info">
-                  <h4>Dining room</h4>
-                  <p>Main dining room</p>
+                  <a
+                    href="assets/img/diningroom/Diningroom1.webp"
+                    data-gallery="portfolio-gallery-diningroom"
+                    class="glightbox preview-link"
+                  >
+                    <img
+                      src="assets/img/diningroom/Diningroom1_thumb.webp"
+                      class="img-fluid"
+                      alt=""
+                      loading="lazy"
+                    />
+                  </a>
+                  <div class="portfolio-info">
+                    <h4>Dining room</h4>
+                    <p>Main dining room</p>
+                  </div>
                 </div>
-              </div>
 
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-diningroom"
-              >
-                <a
-                  href="assets/img/diningroom/Diningroom3.webp"
-                  title="Main dining room"
-                  data-gallery="portfolio-gallery-diningroom"
-                  class="glightbox preview-link"
+                <div
+                  class="col-lg-4 col-md-6 portfolio-item isotope-item filter-diningroom"
                 >
-                  <img
-                    src="assets/img/diningroom/Diningroom3_thumb.webp"
-                    class="img-fluid"
-                    alt=""
-                    loading="lazy"
-                  />
-                </a>
-                <div class="portfolio-info">
-                  <h4>Dining room</h4>
-                  <p>Outdoor dining room</p>
+                  <a
+                    href="assets/img/diningroom/Diningroom2.webp"
+                    data-gallery="portfolio-gallery-diningroom"
+                    class="glightbox preview-link"
+                  >
+                    <img
+                      src="assets/img/diningroom/Diningroom2_thumb.webp"
+                      class="img-fluid"
+                      alt=""
+                      loading="lazy"
+                    />
+                  </a>
+                  <div class="portfolio-info">
+                    <h4>Dining room</h4>
+                    <p>Main dining room</p>
+                  </div>
                 </div>
-              </div>
 
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-diningroom"
-              >
-                <a
-                  href="assets/img/diningroom/Diningroom4.webp"
-                  title="Outdoor dining room"
-                  data-gallery="portfolio-gallery-diningroom"
-                  class="glightbox preview-link"
+                <div
+                  class="col-lg-4 col-md-6 portfolio-item isotope-item filter-diningroom"
                 >
-                  <img
-                    src="assets/img/diningroom/Diningroom4_thumb.webp"
-                    class="img-fluid"
-                    alt=""
-                    loading="lazy"
-                  />
-                </a>
-                <div class="portfolio-info">
-                  <h4>Dining room</h4>
-                  <p>Outdoor dining room</p>
+                  <a
+                    href="assets/img/diningroom/Diningroom3.webp"
+                    data-gallery="portfolio-gallery-diningroom"
+                    class="glightbox preview-link"
+                  >
+                    <img
+                      src="assets/img/diningroom/Diningroom3_thumb.webp"
+                      class="img-fluid"
+                      alt=""
+                      loading="lazy"
+                    />
+                  </a>
+                  <div class="portfolio-info">
+                    <h4>Dining room</h4>
+                    <p>Outdoor dining room</p>
+                  </div>
                 </div>
-              </div>
 
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-diningroom"
-              >
-                <a
-                  href="assets/img/diningroom/Diningroom5.webp"
-                  title="Outdoor dining room"
-                  data-gallery="portfolio-gallery-diningroom"
-                  class="glightbox preview-link"
+                <div
+                  class="col-lg-4 col-md-6 portfolio-item isotope-item filter-diningroom"
                 >
-                  <img
-                    src="assets/img/diningroom/Diningroom5_thumb.webp"
-                    class="img-fluid"
-                    alt=""
-                    loading="lazy"
-                  />
-                </a>
-                <div class="portfolio-info">
-                  <h4>Dining room</h4>
-                  <p>Outdoor dining room</p>
+                  <a
+                    href="assets/img/diningroom/Diningroom4.webp"
+                    data-gallery="portfolio-gallery-diningroom"
+                    class="glightbox preview-link"
+                  >
+                    <img
+                      src="assets/img/diningroom/Diningroom4_thumb.webp"
+                      class="img-fluid"
+                      alt=""
+                      loading="lazy"
+                    />
+                  </a>
+                  <div class="portfolio-info">
+                    <h4>Dining room</h4>
+                    <p>Outdoor dining room</p>
+                  </div>
                 </div>
-              </div>
 
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-diningroom"
-              >
-                <a
-                  href="assets/img/diningroom/Diningroom6.webp"
-                  title="Outdoor dining room"
-                  data-gallery="portfolio-gallery-diningroom"
-                  class="glightbox preview-link"
+                <div
+                  class="col-lg-4 col-md-6 portfolio-item isotope-item filter-diningroom"
                 >
-                  <img
-                    src="assets/img/diningroom/Diningroom6_thumb.webp"
-                    class="img-fluid"
-                    alt=""
-                    loading="lazy"
-                  />
-                </a>
-                <div class="portfolio-info">
-                  <h4>Dining room</h4>
-                  <p>Swimming pool dining room</p>
+                  <a
+                    href="assets/img/diningroom/Diningroom5.webp"
+                    data-gallery="portfolio-gallery-diningroom"
+                    class="glightbox preview-link"
+                  >
+                    <img
+                      src="assets/img/diningroom/Diningroom5_thumb.webp"
+                      class="img-fluid"
+                      alt=""
+                      loading="lazy"
+                    />
+                  </a>
+                  <div class="portfolio-info">
+                    <h4>Dining room</h4>
+                    <p>Outdoor dining room</p>
+                  </div>
                 </div>
-              </div>
 
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-diningroom"
-              >
-                <a
-                  href="assets/img/diningroom/Diningroom7.webp"
-                  title="Swimming pool dining room"
-                  data-gallery="portfolio-gallery-diningroom"
-                  class="glightbox preview-link"
+                <div
+                  class="col-lg-4 col-md-6 portfolio-item isotope-item filter-diningroom"
                 >
-                  <img
-                    src="assets/img/diningroom/Diningroom7_thumb.webp"
-                    class="img-fluid"
-                    alt=""
-                    loading="lazy"
-                  />
-                </a>
-                <div class="portfolio-info">
-                  <h4>Dining room</h4>
-                  <p>Swimming pool dining room</p>
+                  <a
+                    href="assets/img/diningroom/Diningroom6.webp"
+                    data-gallery="portfolio-gallery-diningroom"
+                    class="glightbox preview-link"
+                  >
+                    <img
+                      src="assets/img/diningroom/Diningroom6_thumb.webp"
+                      class="img-fluid"
+                      alt=""
+                      loading="lazy"
+                    />
+                  </a>
+                  <div class="portfolio-info">
+                    <h4>Dining room</h4>
+                    <p>Swimming pool dining room</p>
+                  </div>
                 </div>
-              </div>
 
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-diningroom"
-              >
-                <a
-                  href="assets/img/diningroom/Diningroom8.webp"
-                  title="Swimming pool dining room"
-                  data-gallery="portfolio-gallery-diningroom"
-                  class="glightbox preview-link"
+                <div
+                  class="col-lg-4 col-md-6 portfolio-item isotope-item filter-diningroom"
                 >
-                  <img
-                    src="assets/img/diningroom/Diningroom8_thumb.webp"
-                    class="img-fluid"
-                    alt=""
-                    loading="lazy"
-                  />
-                </a>
-                <div class="portfolio-info">
-                  <h4>Dining room</h4>
-                  <p>Swimming pool dining room</p>
+                  <a
+                    href="assets/img/diningroom/Diningroom7.webp"
+                    data-gallery="portfolio-gallery-diningroom"
+                    class="glightbox preview-link"
+                  >
+                    <img
+                      src="assets/img/diningroom/Diningroom7_thumb.webp"
+                      class="img-fluid"
+                      alt=""
+                      loading="lazy"
+                    />
+                  </a>
+                  <div class="portfolio-info">
+                    <h4>Dining room</h4>
+                    <p>Swimming pool dining room</p>
+                  </div>
                 </div>
-              </div>
 
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-bedroom"
-              >
-                <a
-                  href="assets/img/bedroomA/BedroomA1.webp"
-                  title="First bedroom"
-                  data-gallery="portfolio-gallery-bedroom"
-                  class="glightbox preview-link"
+                <div
+                  class="col-lg-4 col-md-6 portfolio-item isotope-item filter-diningroom"
                 >
-                  <img
-                    src="assets/img/bedroomA/BedroomA1_thumb.webp"
-                    class="img-fluid"
-                    alt=""
-                    loading="lazy"
-                  />
-                </a>
-                <div class="portfolio-info">
-                  <h4>Bedroom</h4>
-                  <p>First bedroom</p>
+                  <a
+                    href="assets/img/diningroom/Diningroom8.webp"
+                    data-gallery="portfolio-gallery-diningroom"
+                    class="glightbox preview-link"
+                  >
+                    <img
+                      src="assets/img/diningroom/Diningroom8_thumb.webp"
+                      class="img-fluid"
+                      alt=""
+                      loading="lazy"
+                    />
+                  </a>
+                  <div class="portfolio-info">
+                    <h4>Dining room</h4>
+                    <p>Swimming pool dining room</p>
+                  </div>
                 </div>
-              </div>
 
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-bedroom"
-              >
-                <a
-                  href="assets/img/bedroomA/BedroomA2.webp"
-                  title="First bedroom"
-                  data-gallery="portfolio-gallery-bedroom"
-                  class="glightbox preview-link"
+                <div
+                  class="col-lg-4 col-md-6 portfolio-item isotope-item filter-bedroom"
                 >
-                  <img
-                    src="assets/img/bedroomA/BedroomA2_thumb.webp"
-                    class="img-fluid"
-                    alt=""
-                    loading="lazy"
-                  />
-                </a>
-                <div class="portfolio-info">
-                  <h4>Bedroom</h4>
-                  <p>First bedroom</p>
+                  <a
+                    href="assets/img/bedroomA/BedroomA1.webp"
+                    data-gallery="portfolio-gallery-bedroom"
+                    class="glightbox preview-link"
+                  >
+                    <img
+                      src="assets/img/bedroomA/BedroomA1_thumb.webp"
+                      class="img-fluid"
+                      alt=""
+                      loading="lazy"
+                    />
+                  </a>
+                  <div class="portfolio-info">
+                    <h4>Bedroom</h4>
+                    <p>First bedroom</p>
+                  </div>
                 </div>
-              </div>
 
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-bedroom"
-              >
-                <a
-                  href="assets/img/bedroomA/BedroomA3.webp"
-                  title="First bedroom"
-                  data-gallery="portfolio-gallery-bedroom"
-                  class="glightbox preview-link"
+                <div
+                  class="col-lg-4 col-md-6 portfolio-item isotope-item filter-bedroom"
                 >
-                  <img
-                    src="assets/img/bedroomA/BedroomA3_thumb.webp"
-                    class="img-fluid"
-                    alt=""
-                    loading="lazy"
-                  />
-                </a>
-                <div class="portfolio-info">
-                  <h4>Bedroom</h4>
-                  <p>First bedroom</p>
+                  <a
+                    href="assets/img/bedroomA/BedroomA2.webp"
+                    data-gallery="portfolio-gallery-bedroom"
+                    class="glightbox preview-link"
+                  >
+                    <img
+                      src="assets/img/bedroomA/BedroomA2_thumb.webp"
+                      class="img-fluid"
+                      alt=""
+                      loading="lazy"
+                    />
+                  </a>
+                  <div class="portfolio-info">
+                    <h4>Bedroom</h4>
+                    <p>First bedroom</p>
+                  </div>
                 </div>
-              </div>
 
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-bedroom"
-              >
-                <a
-                  href="assets/img/bedroomB/BedroomB1.webp"
-                  title="Second bedroom"
-                  data-gallery="portfolio-gallery-bedroom"
-                  class="glightbox preview-link"
+                <div
+                  class="col-lg-4 col-md-6 portfolio-item isotope-item filter-bedroom"
                 >
-                  <img
-                    src="assets/img/bedroomB/BedroomB1_thumb.webp"
-                    class="img-fluid"
-                    alt=""
-                    loading="lazy"
-                  />
-                </a>
-                <div class="portfolio-info">
-                  <h4>Bedroom</h4>
-                  <p>Second bedroom</p>
+                  <a
+                    href="assets/img/bedroomA/BedroomA3.webp"
+                    data-gallery="portfolio-gallery-bedroom"
+                    class="glightbox preview-link"
+                  >
+                    <img
+                      src="assets/img/bedroomA/BedroomA3_thumb.webp"
+                      class="img-fluid"
+                      alt=""
+                      loading="lazy"
+                    />
+                  </a>
+                  <div class="portfolio-info">
+                    <h4>Bedroom</h4>
+                    <p>First bedroom</p>
+                  </div>
                 </div>
-              </div>
 
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-bedroom"
-              >
-                <a
-                  href="assets/img/bedroomB/BedroomB2.webp"
-                  title="Second bedroom"
-                  data-gallery="portfolio-gallery-bedroom"
-                  class="glightbox preview-link"
+                <div
+                  class="col-lg-4 col-md-6 portfolio-item isotope-item filter-bedroom"
                 >
-                  <img
-                    src="assets/img/bedroomB/BedroomB2_thumb.webp"
-                    class="img-fluid"
-                    alt=""
-                    loading="lazy"
-                  />
-                </a>
-                <div class="portfolio-info">
-                  <h4>Bedroom</h4>
-                  <p>Second bedroomm</p>
+                  <a
+                    href="assets/img/bedroomB/BedroomB1.webp"
+                    data-gallery="portfolio-gallery-bedroom"
+                    class="glightbox preview-link"
+                  >
+                    <img
+                      src="assets/img/bedroomB/BedroomB1_thumb.webp"
+                      class="img-fluid"
+                      alt=""
+                      loading="lazy"
+                    />
+                  </a>
+                  <div class="portfolio-info">
+                    <h4>Bedroom</h4>
+                    <p>Second bedroom</p>
+                  </div>
                 </div>
-              </div>
 
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-bedroom"
-              >
-                <a
-                  href="assets/img/bedroomB/BedroomB3.webp"
-                  title="Second bedroom"
-                  data-gallery="portfolio-gallery-bedroom"
-                  class="glightbox preview-link"
+                <div
+                  class="col-lg-4 col-md-6 portfolio-item isotope-item filter-bedroom"
                 >
-                  <img
-                    src="assets/img/bedroomB/BedroomB3_thumb.webp"
-                    class="img-fluid"
-                    alt=""
-                    loading="lazy"
-                  />
-                </a>
-                <div class="portfolio-info">
-                  <h4>Bedroom</h4>
-                  <p>Second bedroom</p>
+                  <a
+                    href="assets/img/bedroomB/BedroomB2.webp"
+                    data-gallery="portfolio-gallery-bedroom"
+                    class="glightbox preview-link"
+                  >
+                    <img
+                      src="assets/img/bedroomB/BedroomB2_thumb.webp"
+                      class="img-fluid"
+                      alt=""
+                      loading="lazy"
+                    />
+                  </a>
+                  <div class="portfolio-info">
+                    <h4>Bedroom</h4>
+                    <p>Second bedroomm</p>
+                  </div>
                 </div>
-              </div>
 
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-bedroom"
-              >
-                <a
-                  href="assets/img/bedroomC/BedroomC1.webp"
-                  title="Bedroom"
-                  data-gallery="portfolio-gallery-bedroom"
-                  class="glightbox preview-link"
+                <div
+                  class="col-lg-4 col-md-6 portfolio-item isotope-item filter-bedroom"
                 >
-                  <img
-                    src="assets/img/bedroomC/BedroomC1_thumb.webp"
-                    class="img-fluid"
-                    alt=""
-                    loading="lazy"
-                  />
-                </a>
-                <div class="portfolio-info">
-                  <h4>Bedroom</h4>
-                  <p>Third bedroom</p>
+                  <a
+                    href="assets/img/bedroomB/BedroomB3.webp"
+                    data-gallery="portfolio-gallery-bedroom"
+                    class="glightbox preview-link"
+                  >
+                    <img
+                      src="assets/img/bedroomB/BedroomB3_thumb.webp"
+                      class="img-fluid"
+                      alt=""
+                      loading="lazy"
+                    />
+                  </a>
+                  <div class="portfolio-info">
+                    <h4>Bedroom</h4>
+                    <p>Second bedroom</p>
+                  </div>
                 </div>
-              </div>
 
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-bedroom"
-              >
-                <a
-                  href="assets/img/bedroomC/BedroomC2.webp"
-                  title="Third bedroom"
-                  data-gallery="portfolio-gallery-bedroom"
-                  class="glightbox preview-link"
+                <div
+                  class="col-lg-4 col-md-6 portfolio-item isotope-item filter-bedroom"
                 >
-                  <img
-                    src="assets/img/bedroomC/BedroomC2_thumb.webp"
-                    class="img-fluid"
-                    alt=""
-                    loading="lazy"
-                  />
-                </a>
-                <div class="portfolio-info">
-                  <h4>Bedroom</h4>
-                  <p>Third bedroom</p>
+                  <a
+                    href="assets/img/bedroomC/BedroomC1.webp"
+                    data-gallery="portfolio-gallery-bedroom"
+                    class="glightbox preview-link"
+                  >
+                    <img
+                      src="assets/img/bedroomC/BedroomC1_thumb.webp"
+                      class="img-fluid"
+                      alt=""
+                      loading="lazy"
+                    />
+                  </a>
+                  <div class="portfolio-info">
+                    <h4>Bedroom</h4>
+                    <p>Third bedroom</p>
+                  </div>
                 </div>
-              </div>
 
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-bedroom"
-              >
-                <a
-                  href="assets/img/bedroomC/BedroomC3.webp"
-                  title="Third bedroom"
-                  data-gallery="portfolio-gallery-bedroom"
-                  class="glightbox preview-link"
+                <div
+                  class="col-lg-4 col-md-6 portfolio-item isotope-item filter-bedroom"
                 >
-                  <img
-                    src="assets/img/bedroomC/BedroomC3_thumb.webp"
-                    class="img-fluid"
-                    alt=""
-                    loading="lazy"
-                  />
-                </a>
-                <div class="portfolio-info">
-                  <h4>Bedroom</h4>
-                  <p>Third bedroom</p>
+                  <a
+                    href="assets/img/bedroomC/BedroomC2.webp"
+                    data-gallery="portfolio-gallery-bedroom"
+                    class="glightbox preview-link"
+                  >
+                    <img
+                      src="assets/img/bedroomC/BedroomC2_thumb.webp"
+                      class="img-fluid"
+                      alt=""
+                      loading="lazy"
+                    />
+                  </a>
+                  <div class="portfolio-info">
+                    <h4>Bedroom</h4>
+                    <p>Third bedroom</p>
+                  </div>
                 </div>
-              </div>
 
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-bedroom"
-              >
-                <a
-                  href="assets/img/bedroomC/BedroomC4.webp"
-                  title="Third bedroom"
-                  data-gallery="portfolio-gallery-bedroom"
-                  class="glightbox preview-link"
+                <div
+                  class="col-lg-4 col-md-6 portfolio-item isotope-item filter-bedroom"
                 >
-                  <img
-                    src="assets/img/bedroomC/BedroomC4_thumb.webp"
-                    class="img-fluid"
-                    alt=""
-                    loading="lazy"
-                  />
-                </a>
-                <div class="portfolio-info">
-                  <h4>Bedroom</h4>
-                  <p>Third bedroom</p>
+                  <a
+                    href="assets/img/bedroomC/BedroomC3.webp"
+                    data-gallery="portfolio-gallery-bedroom"
+                    class="glightbox preview-link"
+                  >
+                    <img
+                      src="assets/img/bedroomC/BedroomC3_thumb.webp"
+                      class="img-fluid"
+                      alt=""
+                      loading="lazy"
+                    />
+                  </a>
+                  <div class="portfolio-info">
+                    <h4>Bedroom</h4>
+                    <p>Third bedroom</p>
+                  </div>
                 </div>
-              </div>
 
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-bedroom"
-              >
-                <a
-                  href="assets/img/bedroomC/BedroomC5.webp"
-                  title="Third bedroom"
-                  data-gallery="portfolio-gallery-bedroom"
-                  class="glightbox preview-link"
+                <div
+                  class="col-lg-4 col-md-6 portfolio-item isotope-item filter-bedroom"
                 >
-                  <img
-                    src="assets/img/bedroomC/BedroomC5_thumb.webp"
-                    class="img-fluid"
-                    alt=""
-                    loading="lazy"
-                  />
-                </a>
-                <div class="portfolio-info">
-                  <h4>Bedroom</h4>
-                  <p>Third bedroom</p>
+                  <a
+                    href="assets/img/bedroomC/BedroomC4.webp"
+                    data-gallery="portfolio-gallery-bedroom"
+                    class="glightbox preview-link"
+                  >
+                    <img
+                      src="assets/img/bedroomC/BedroomC4_thumb.webp"
+                      class="img-fluid"
+                      alt=""
+                      loading="lazy"
+                    />
+                  </a>
+                  <div class="portfolio-info">
+                    <h4>Bedroom</h4>
+                    <p>Third bedroom</p>
+                  </div>
                 </div>
-              </div>
 
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-bathroom"
-              >
-                <a
-                  href="assets/img/bathrooms/BathroomMain.webp"
-                  title="Main house bathroom"
-                  data-gallery="portfolio-gallery-bathroom"
-                  class="glightbox preview-link"
+                <div
+                  class="col-lg-4 col-md-6 portfolio-item isotope-item filter-bedroom"
                 >
-                  <img
-                    src="assets/img/bathrooms/BathroomMain_thumb.webp"
-                    class="img-fluid"
-                    alt=""
-                    loading="lazy"
-                  />
-                </a>
-                <div class="portfolio-info">
-                  <h4>Bathroom</h4>
-                  <p>Main house bathroom</p>
+                  <a
+                    href="assets/img/bedroomC/BedroomC5.webp"
+                    data-gallery="portfolio-gallery-bedroom"
+                    class="glightbox preview-link"
+                  >
+                    <img
+                      src="assets/img/bedroomC/BedroomC5_thumb.webp"
+                      class="img-fluid"
+                      alt=""
+                      loading="lazy"
+                    />
+                  </a>
+                  <div class="portfolio-info">
+                    <h4>Bedroom</h4>
+                    <p>Third bedroom</p>
+                  </div>
                 </div>
-              </div>
 
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-bathroom"
-              >
-                <a
-                  href="assets/img/bathrooms/BathroomBeds.webp"
-                  title="Beds house bathroom"
-                  data-gallery="portfolio-gallery-bathroom"
-                  class="glightbox preview-link"
+                <div
+                  class="col-lg-4 col-md-6 portfolio-item isotope-item filter-bathroom"
                 >
-                  <img
-                    src="assets/img/bathrooms/BathroomBeds_thumb.webp"
-                    class="img-fluid"
-                    alt=""
-                    loading="lazy"
-                  />
-                </a>
-                <div class="portfolio-info">
-                  <h4>Bathroom</h4>
-                  <p>Beds house bathroom</p>
+                  <a
+                    href="assets/img/bathrooms/BathroomMain.webp"
+                    data-gallery="portfolio-gallery-bathroom"
+                    class="glightbox preview-link"
+                  >
+                    <img
+                      src="assets/img/bathrooms/BathroomMain_thumb.webp"
+                      class="img-fluid"
+                      alt=""
+                      loading="lazy"
+                    />
+                  </a>
+                  <div class="portfolio-info">
+                    <h4>Bathroom</h4>
+                    <p>Main house bathroom</p>
+                  </div>
                 </div>
-              </div>
 
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-swimmingpool"
-              >
-                <a
-                  href="assets/img/swimmingpool/Swimmingpool1.webp"
-                  title="Swimming pool area"
-                  data-gallery="portfolio-gallery-swimmingpool"
-                  class="glightbox preview-link"
+                <div
+                  class="col-lg-4 col-md-6 portfolio-item isotope-item filter-bathroom"
                 >
-                  <img
-                    src="assets/img/swimmingpool/Swimmingpool1_thumb.webp"
-                    class="img-fluid"
-                    alt=""
-                    loading="lazy"
-                  />
-                </a>
-                <div class="portfolio-info">
-                  <h4>Swimming pool</h4>
-                  <p>Swimming pool area</p>
+                  <a
+                    href="assets/img/bathrooms/BathroomBeds.webp"
+                    data-gallery="portfolio-gallery-bathroom"
+                    class="glightbox preview-link"
+                  >
+                    <img
+                      src="assets/img/bathrooms/BathroomBeds_thumb.webp"
+                      class="img-fluid"
+                      alt=""
+                      loading="lazy"
+                    />
+                  </a>
+                  <div class="portfolio-info">
+                    <h4>Bathroom</h4>
+                    <p>Beds house bathroom</p>
+                  </div>
                 </div>
-              </div>
 
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-swimmingpool"
-              >
-                <a
-                  href="assets/img/swimmingpool/Swimmingpool2.webp"
-                  title="Swimming pool area"
-                  data-gallery="portfolio-gallery-swimmingpool"
-                  class="glightbox preview-link"
+                <div
+                  class="col-lg-4 col-md-6 portfolio-item isotope-item filter-swimmingpool"
                 >
-                  <img
-                    src="assets/img/swimmingpool/Swimmingpool2_thumb.webp"
-                    class="img-fluid"
-                    alt=""
-                    loading="lazy"
-                  />
-                </a>
-                <div class="portfolio-info">
-                  <h4>Swimming pool</h4>
-                  <p>Swimming pool area</p>
+                  <a
+                    href="assets/img/swimmingpool/Swimmingpool1.webp"
+                    data-gallery="portfolio-gallery-swimmingpool"
+                    class="glightbox preview-link"
+                  >
+                    <img
+                      src="assets/img/swimmingpool/Swimmingpool1_thumb.webp"
+                      class="img-fluid"
+                      alt=""
+                      loading="lazy"
+                    />
+                  </a>
+                  <div class="portfolio-info">
+                    <h4>Swimming pool</h4>
+                    <p>Swimming pool area</p>
+                  </div>
                 </div>
-              </div>
 
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-swimmingpool"
-              >
-                <a
-                  href="assets/img/swimmingpool/Swimmingpool3.webp"
-                  title="Swimming pool area"
-                  data-gallery="portfolio-gallery-swimmingpool"
-                  class="glightbox preview-link"
+                <div
+                  class="col-lg-4 col-md-6 portfolio-item isotope-item filter-swimmingpool"
                 >
-                  <img
-                    src="assets/img/swimmingpool/Swimmingpool3_thumb.webp"
-                    class="img-fluid"
-                    alt=""
-                    loading="lazy"
-                  />
-                </a>
-                <div class="portfolio-info">
-                  <h4>Swimming pool</h4>
-                  <p>Swimming pool area</p>
+                  <a
+                    href="assets/img/swimmingpool/Swimmingpool2.webp"
+                    data-gallery="portfolio-gallery-swimmingpool"
+                    class="glightbox preview-link"
+                  >
+                    <img
+                      src="assets/img/swimmingpool/Swimmingpool2_thumb.webp"
+                      class="img-fluid"
+                      alt=""
+                      loading="lazy"
+                    />
+                  </a>
+                  <div class="portfolio-info">
+                    <h4>Swimming pool</h4>
+                    <p>Swimming pool area</p>
+                  </div>
                 </div>
-              </div>
 
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-swimmingpool"
-              >
-                <a
-                  href="assets/img/swimmingpool/Swimmingpool4.webp"
-                  title="Swimming pool area"
-                  data-gallery="portfolio-gallery-swimmingpool"
-                  class="glightbox preview-link"
+                <div
+                  class="col-lg-4 col-md-6 portfolio-item isotope-item filter-swimmingpool"
                 >
-                  <img
-                    src="assets/img/swimmingpool/Swimmingpool4_thumb.webp"
-                    class="img-fluid"
-                    alt=""
-                    loading="lazy"
-                  />
-                </a>
-                <div class="portfolio-info">
-                  <h4>Swimming pool</h4>
-                  <p>Swimming pool area</p>
+                  <a
+                    href="assets/img/swimmingpool/Swimmingpool3.webp"
+                    data-gallery="portfolio-gallery-swimmingpool"
+                    class="glightbox preview-link"
+                  >
+                    <img
+                      src="assets/img/swimmingpool/Swimmingpool3_thumb.webp"
+                      class="img-fluid"
+                      alt=""
+                      loading="lazy"
+                    />
+                  </a>
+                  <div class="portfolio-info">
+                    <h4>Swimming pool</h4>
+                    <p>Swimming pool area</p>
+                  </div>
                 </div>
-              </div>
 
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-swimmingpool"
-              >
-                <a
-                  href="assets/img/swimmingpool/Swimmingpool5.webp"
-                  title="Swimming pool area"
-                  data-gallery="portfolio-gallery-swimmingpool"
-                  class="glightbox preview-link"
+                <div
+                  class="col-lg-4 col-md-6 portfolio-item isotope-item filter-swimmingpool"
                 >
-                  <img
-                    src="assets/img/swimmingpool/Swimmingpool5_thumb.webp"
-                    class="img-fluid"
-                    alt=""
-                    loading="lazy"
-                  />
-                </a>
-                <div class="portfolio-info">
-                  <h4>Swimming pool</h4>
-                  <p>Swimming pool area</p>
+                  <a
+                    href="assets/img/swimmingpool/Swimmingpool4.webp"
+                    data-gallery="portfolio-gallery-swimmingpool"
+                    class="glightbox preview-link"
+                  >
+                    <img
+                      src="assets/img/swimmingpool/Swimmingpool4_thumb.webp"
+                      class="img-fluid"
+                      alt=""
+                      loading="lazy"
+                    />
+                  </a>
+                  <div class="portfolio-info">
+                    <h4>Swimming pool</h4>
+                    <p>Swimming pool area</p>
+                  </div>
                 </div>
-              </div>
 
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-sportsarea"
-              >
-                <a
-                  href="assets/img/sportsarea/Sportsarea1.webp"
-                  title="Sports area"
-                  data-gallery="portfolio-gallery-sportsarea"
-                  class="glightbox preview-link"
+                <div
+                  class="col-lg-4 col-md-6 portfolio-item isotope-item filter-swimmingpool"
                 >
-                  <img
-                    src="assets/img/sportsarea/Sportsarea1_thumb.webp"
-                    class="img-fluid"
-                    alt=""
-                    loading="lazy"
-                  />
-                </a>
-                <div class="portfolio-info">
-                  <h4>Sports area</h4>
-                  <p>Badminton, basket, minigolf</p>
+                  <a
+                    href="assets/img/swimmingpool/Swimmingpool5.webp"
+                    data-gallery="portfolio-gallery-swimmingpool"
+                    class="glightbox preview-link"
+                  >
+                    <img
+                      src="assets/img/swimmingpool/Swimmingpool5_thumb.webp"
+                      class="img-fluid"
+                      alt=""
+                      loading="lazy"
+                    />
+                  </a>
+                  <div class="portfolio-info">
+                    <h4>Swimming pool</h4>
+                    <p>Swimming pool area</p>
+                  </div>
                 </div>
-              </div>
 
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-sportsarea"
-              >
-                <a
-                  href="assets/img/sportsarea/Sportsarea2.webp"
-                  title="Sports area"
-                  data-gallery="portfolio-gallery-sportsarea"
-                  class="glightbox preview-link"
+                <div
+                  class="col-lg-4 col-md-6 portfolio-item isotope-item filter-sportsarea"
                 >
-                  <img
-                    src="assets/img/sportsarea/Sportsarea2_thumb.webp"
-                    class="img-fluid"
-                    alt=""
-                    loading="lazy"
-                  />
-                </a>
-                <div class="portfolio-info">
-                  <h4>Sports area</h4>
-                  <p>Badminton, basket, minigolf</p>
+                  <a
+                    href="assets/img/sportsarea/Sportsarea1.webp"
+                    data-gallery="portfolio-gallery-sportsarea"
+                    class="glightbox preview-link"
+                  >
+                    <img
+                      src="assets/img/sportsarea/Sportsarea1_thumb.webp"
+                      class="img-fluid"
+                      alt=""
+                      loading="lazy"
+                    />
+                  </a>
+                  <div class="portfolio-info">
+                    <h4>Sports area</h4>
+                    <p>Badminton, basket, minigolf</p>
+                  </div>
                 </div>
-              </div>
 
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-kidscastle"
-              >
-                <a
-                  href="assets/img/kidscastle/Kidscastle1.webp"
-                  title="Kids castle"
-                  data-gallery="portfolio-gallery-kidscastle"
-                  class="glightbox preview-link"
+                <div
+                  class="col-lg-4 col-md-6 portfolio-item isotope-item filter-sportsarea"
                 >
-                  <img
-                    src="assets/img/kidscastle/Kidscastle1_thumb.webp"
-                    class="img-fluid"
-                    alt=""
-                    loading="lazy"
-                  />
-                </a>
-                <div class="portfolio-info">
-                  <h4>Kids castle</h4>
-                  <p>Kids castle with slide</p>
+                  <a
+                    href="assets/img/sportsarea/Sportsarea2.webp"
+                    data-gallery="portfolio-gallery-sportsarea"
+                    class="glightbox preview-link"
+                  >
+                    <img
+                      src="assets/img/sportsarea/Sportsarea2_thumb.webp"
+                      class="img-fluid"
+                      alt=""
+                      loading="lazy"
+                    />
+                  </a>
+                  <div class="portfolio-info">
+                    <h4>Sports area</h4>
+                    <p>Badminton, basket, minigolf</p>
+                  </div>
                 </div>
-              </div>
 
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-kidscastle"
-              >
-                <a
-                  href="assets/img/kidscastle/Kidscastle2.webp"
-                  title="Kids castle"
-                  data-gallery="portfolio-gallery-kidscastle"
-                  class="glightbox preview-link"
+                <div
+                  class="col-lg-4 col-md-6 portfolio-item isotope-item filter-kidscastle"
                 >
-                  <img
-                    src="assets/img/kidscastle/Kidscastle2_thumb.webp"
-                    class="img-fluid"
-                    alt=""
-                    loading="lazy"
-                  />
-                </a>
-                <div class="portfolio-info">
-                  <h4>Kids castle</h4>
-                  <p>Kids castle with slide</p>
+                  <a
+                    href="assets/img/kidscastle/Kidscastle1.webp"
+                    data-gallery="portfolio-gallery-kidscastle"
+                    class="glightbox preview-link"
+                  >
+                    <img
+                      src="assets/img/kidscastle/Kidscastle1_thumb.webp"
+                      class="img-fluid"
+                      alt=""
+                      loading="lazy"
+                    />
+                  </a>
+                  <div class="portfolio-info">
+                    <h4>Kids castle</h4>
+                    <p>Kids castle with slide</p>
+                  </div>
+                </div>
+
+                <div
+                  class="col-lg-4 col-md-6 portfolio-item isotope-item filter-kidscastle"
+                >
+                  <a
+                    href="assets/img/kidscastle/Kidscastle2.webp"
+                    data-gallery="portfolio-gallery-kidscastle"
+                    class="glightbox preview-link"
+                  >
+                    <img
+                      src="assets/img/kidscastle/Kidscastle2_thumb.webp"
+                      class="img-fluid"
+                      alt=""
+                      loading="lazy"
+                    />
+                  </a>
+                  <div class="portfolio-info">
+                    <h4>Kids castle</h4>
+                    <p>Kids castle with slide</p>
+                  </div>
                 </div>
               </div>
             </div>
             <!-- End Portfolio Container -->
+          </div>
+          <div class="portfolio-mobile">
+            <!-- Mobile Slider Portfolio -->
+            <!-- Mobile Category Filter -->
+            <div class="container d-block d-md-none mb-3">
+              <select id="slider-category" class="form-select">
+                <option value="all">All</option>
+                <option value="outdoors">Outdoors</option>
+                <option value="livingroom">Living room</option>
+                <option value="kitchen">Kitchen</option>
+                <option value="diningroom">Dining rooms</option>
+                <option value="bedroom">Bedrooms</option>
+                <option value="bathroom">Bathrooms</option>
+                <option value="swimmingpool">Swimming pool</option>
+                <option value="sportsarea">Sports area</option>
+                <option value="kidscastle">Kids castle</option>
+                <!-- añade más si necesitas -->
+              </select>
+            </div>
+            <!-- Swiper Slider -->
+            <div class="swiper portfolio-slider">
+              <div class="swiper-wrapper" id="portfolio-swiper-wrapper">
+                <!-- Las slides se inyectarán dinámicamente por JS -->
+              </div>
+              <!-- Paginación y navegación -->
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+            </div>
           </div>
         </div>
       </section>
@@ -1198,6 +1195,7 @@
             <script type="application/json" class="swiper-config">
               {
                 "loop": true,
+                "autoHeight": true,
                 "speed": 600,
                 "autoplay": {
                   "delay": 5000
@@ -1949,5 +1947,8 @@
 
     <!-- Main JS File -->
     <script src="assets/js/main.js"></script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   </body>
 </html>
