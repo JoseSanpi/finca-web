@@ -274,7 +274,7 @@
     swiper = new Swiper('.portfolio-slider', {
       slidesPerView: 1.2,
       spaceBetween: 10,
-      pagination: { el: '.swiper-pagination', clickable: true },
+      pagination: { el: '.swiper-pagination', type: 'fraction'},
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev'
