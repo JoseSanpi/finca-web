@@ -1157,12 +1157,10 @@ section,
 }
 .portfolio-slider .swiper-slide img {
   width: 100%;
-  height: 250px;
+  height: 300px;
   object-fit: cover;
   border-radius: 8px; /* opcional, para esquinas suaves */
 }
-
-
 
 .portfolio-slider .swiper-pagination-fraction {
   font-size: 0.8em; 
@@ -1174,7 +1172,7 @@ section,
 
 .portfolio-slider .swiper-button-next,
 .portfolio-slider .swiper-button-prev {
-  color: #fff !important; /* Blanco */
+  color: #67b0d1 !important; /* Blanco */
 }
 /* Por defecto, oculta el slider en escritorio */
 .portfolio-mobile {

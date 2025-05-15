@@ -273,6 +273,8 @@
     if (swiper) swiper.destroy(true, true);
     swiper = new Swiper('.portfolio-slider', {
       slidesPerView: 1.2,
+      loop:true,
+      centeredSlides: true,
       spaceBetween: 10,
       pagination: { el: '.swiper-pagination', type: 'fraction'},
       navigation: {
