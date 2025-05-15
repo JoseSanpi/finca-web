@@ -1120,16 +1120,54 @@ section,
 # Portfolio Section
 --------------------------------------------------------------*/
 
-.swiper-slide img {
+
+.portfolio-mobile .form-select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 100%;
+  background-color: #f8f9fa;
+  border: 1px solid #2f4d5a;
+  color: #444444;
+  padding: 16px 48px 16px 16px;
+  border-radius: 14px;
+  font-size: 1.15rem;
+  font-weight: 500;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  outline: none;
+  cursor: pointer;
+  background-image: url('data:image/svg+xml;utf8,<svg fill="currentcolor" height="28" viewBox="0 0 20 20" width="28" xmlns="http://www.w3.org/2000/svg"><path d="M7.293 7.293a1 1 0 0 1 1.414 0L10 8.586l1.293-1.293a1 1 0 1 1 1.414 1.414l-2 2a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 0-1.414z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 18px center;
+  background-size: 28px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.portfolio-mobile .form-select:focus {
+  border-color: #67b0d1;
+  box-shadow: 0 0 0 2px rgba(14, 16, 146, 0.1);
+}
+
+.portfolio-mobile .form-select option {
+  color: #444444;
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+
+.portfolio-slider {
+  padding-bottom: 45px;
+}
+.portfolio-slider .swiper-slide img {
   width: 100%;
   height: 250px; /* Puedes ajustar a tu gusto: 200px, 300px, etc. */
   object-fit: cover;
   border-radius: 8px; /* opcional, para esquinas suaves */
 }
-.portfolio-slider {
-  padding-bottom: 30px;
-}
 
+.portfolio-slider .swiper-button-next,
+.portfolio-slider .swiper-button-prev {
+  color: #fff !important; /* Blanco */
+}
 /* Por defecto, oculta el slider en escritorio */
 .portfolio-mobile {
   display: none;
@@ -1254,10 +1292,8 @@ section,
 }
 
 .testimonials .testimonial-item .testimonial-img {
-  width: 100px;
-  height: 100px;
+  width: 90px;
   border-radius: 50%;
-  object-fit: cover;
   margin: 0 auto;
 }
 
