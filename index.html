@@ -1312,6 +1312,148 @@
       </section>
       <!-- /Testimonials Section -->
 
+      <!-- Calendar Section -->
+      <link
+        href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.css"
+        rel="stylesheet"
+      />
+      <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
+
+      <section id="availability" class="section">
+        <div class="container section-title" data-aos="fade-up">
+          <h2>Availability</h2>
+          <p>Check which dates are already booked to plan your stay</p>
+        </div>
+
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <div id="calendar"></div>
+        </div>
+      </section>
+
+      <style>
+        #calendar {
+          max-width: 100%;
+          margin: 0 auto;
+          background: #fff;
+          padding: 20px;
+          border-radius: 20px;
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+        }
+        .fc .fc-daygrid-day.fc-day-today {
+          background-color: #e3f2fd;
+        }
+
+        .fc .fc-button-primary {
+          background-color: #67b0d1; /* tu color corporativo */
+          border-color: #67b0d1;
+          color: #ffffff;
+        }
+
+        .fc-col-header-cell-cushion {
+          color: #2b2b2b;
+          font-weight: 400;
+        }
+
+        .fc .fc-col-header-cell-cushion:hover {
+          color: #2b2b2b;
+          text-decoration: none;
+        }
+
+        .fc-multimonth-title {
+          color: #2f4d5a;
+        }
+
+        .fc .fc-daygrid-day-number {
+          color: #444444;
+          opacity: 0.8; /* Ajusta este valor entre 0 (transparente) y 1 (opaco) */
+          text-decoration: none;
+          pointer-events: none; /* hace que no respondan al hover/click */
+        }
+
+        .fc .fc-daygrid-day-number:hover {
+          color: #444444;
+          text-decoration: none;
+        }
+
+        .fc-daygrid-day-top {
+          justify-content: center; /* centra horizontalmente */
+          align-items: center; /* centra verticalmente */
+          height: 100%; /* asegura altura completa */
+          display: flex; /* activa el centrado */
+        }
+
+        .fc-daygrid-day-frame {
+          display: flex;
+          align-items: center; /* centra verticalmente */
+          justify-content: center; /* centra horizontalmente */
+          height: 100%;
+        }
+
+        .fc-theme-standard td,
+        .fc-theme-standard th {
+          border: none;
+        }
+
+        .fc {
+          font-family: "Roboto", sans-serif; /* o la fuente que uses */
+          font-size: 14px; /* ajusta al resto de la página */
+        }
+
+        /* Quitar borde gris de enfoque en botones al hacer clic */
+        .fc .fc-button:focus,
+        .fc .fc-button:active,
+        .fc .fc-button-primary:focus,
+        .fc .fc-button-primary:active {
+          outline: none;
+          box-shadow: none;
+          background-color: #67b0d1; /* Mantiene tu color principal */
+          border-color: #67b0d1;
+          color: #fff;
+        }
+
+        /* Aplica Roboto a absolutamente todo dentro del calendario */
+        #calendar,
+        #calendar *:not(.fc-icon):not(.fc-icon::before) {
+          font-family: "Roboto", sans-serif !important;
+        }
+      </style>
+
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const calendarEl = document.getElementById("calendar");
+
+          const isMobile = window.innerWidth <= 768;
+
+          const calendar = new FullCalendar.Calendar(calendarEl, {
+            initialView: isMobile ? "dayGridMonth" : "multiMonthThreeMonth",
+            height: "auto",
+            headerToolbar: {
+              left: "prev",
+              center: "title",
+              right: "next",
+            },
+            views: {
+              multiMonthThreeMonth: {
+                type: "multiMonth",
+                duration: { months: 3 },
+              },
+            },
+            events: [
+              {
+                start: "2025-05-01",
+                end: "2025-10-27",
+                display: "background",
+                color: "#ffb3b3",
+              },
+            ],
+          });
+
+          calendar.render();
+        });
+      </script>
+
+      <!-- /Calendar Section -->
+
       <!-- Call To Action Section -->
       <section
         id="call-to-action"
@@ -1595,7 +1737,8 @@
             </div>
             <div class="col-lg-7">
               <p>
-                Check-in is from 3:00 PM to 12:00 AM, and check-out is by 10:00 AM.
+                Check-in is from 3:00 PM to 12:00 AM, and check-out is by 10:00
+                AM.
               </p>
             </div>
           </div>
@@ -1608,7 +1751,8 @@
             </div>
             <div class="col-lg-7">
               <p>
-                You can request it when booking, but it's subject to availability and can't be guaranteed.
+                You can request it when booking, but it's subject to
+                availability and can't be guaranteed.
               </p>
             </div>
           </div>
@@ -1620,9 +1764,7 @@
               <h4>How many guests can stay at the finca?</h4>
             </div>
             <div class="col-lg-7">
-              <p>
-                The house accommodates up to 6 guests comfortably.
-              </p>
+              <p>The house accommodates up to 6 guests comfortably.</p>
             </div>
           </div>
           <!-- End F.A.Q Item-->
@@ -1634,7 +1776,8 @@
             </div>
             <div class="col-lg-7">
               <p>
-                Yes! We are pet-friendly. Let us know in advance if you're bringing a furry friend.
+                Yes! We are pet-friendly. Let us know in advance if you're
+                bringing a furry friend.
               </p>
             </div>
           </div>
@@ -1647,7 +1790,8 @@
             </div>
             <div class="col-lg-7">
               <p>
-                The swimmingpool is not fenced, so children must be supervised at all times.
+                The swimmingpool is not fenced, so children must be supervised
+                at all times.
               </p>
             </div>
           </div>
@@ -1660,7 +1804,8 @@
             </div>
             <div class="col-lg-7">
               <p>
-                The closest beaches (like Playa de Muro and Port d'Alcúdia) are just under 5 km away.
+                The closest beaches (like Playa de Muro and Port d'Alcúdia) are
+                just under 5 km away.
               </p>
             </div>
           </div>
@@ -1673,7 +1818,9 @@
             </div>
             <div class="col-lg-7">
               <p>
-                Yes, we strongly recommend renting a car to explore the area comfortably, reach the beaches, and enjoy nearby restaurants and attractions with ease.
+                Yes, we strongly recommend renting a car to explore the area
+                comfortably, reach the beaches, and enjoy nearby restaurants and
+                attractions with ease.
               </p>
             </div>
           </div>
