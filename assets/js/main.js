@@ -357,6 +357,7 @@
 
    // Inicializa AOS con opciones
    AOS.init({
+    offset: 5, // antes: 120
     duration: 600,   // Duración de la animación
     once: true       // Ejecuta la animación solo una vez
   });
