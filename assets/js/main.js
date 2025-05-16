@@ -13,11 +13,9 @@
    * Apply .scrolled class to the body as the page is scrolled down
    */
   function toggleScrolled() {
-    const selectBody = document.querySelector('body');
-    const selectHeader = document.querySelector('#header');
-    if (!selectHeader.classList.contains('scroll-up-sticky') && !selectHeader.classList.contains('sticky-top') && !selectHeader.classList.contains('fixed-top')) return;
-    window.scrollY > 100 ? selectBody.classList.add('scrolled') : selectBody.classList.remove('scrolled');
+    document.body.classList.toggle('scrolled', window.scrollY > 100);
   }
+  
 
   document.addEventListener('scroll', toggleScrolled);
   window.addEventListener('load', toggleScrolled);
@@ -45,8 +43,6 @@
     });
 
   });
-
-  
 
   /**
    * Toggle mobile nav dropdowns
@@ -358,5 +354,18 @@
   }
   window.addEventListener('load', navmenuScrollspy);
   document.addEventListener('scroll', navmenuScrollspy);
+
+   // Inicializa AOS con opciones
+   AOS.init({
+    duration: 600,   // Duración de la animación
+    once: true       // Ejecuta la animación solo una vez
+  });
+
+  // Fuerza un refresco completo tras 'load' y un pequeño retardo
+  window.addEventListener('load', () => {
+    AOS.refreshHard();        // Refresca offsets y elementos
+    setTimeout(AOS.refresh, 200); // Retardo para asegurarlo
+  });
+  
 
 })();

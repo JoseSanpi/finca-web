@@ -962,6 +962,9 @@ section,
 /*--------------------------------------------------------------
 # Services Section
 --------------------------------------------------------------*/
+.services .section-title h2 {
+  padding: 11px 0; /* test */
+}
 .services .service-item {
   background-color: var(--surface-color);
   box-shadow: 0px 0 25px 0 rgba(0, 0, 0, 0.1);
