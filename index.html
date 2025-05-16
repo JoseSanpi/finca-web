@@ -68,10 +68,9 @@
           <ul>
             <li><a href="#hero" class="active">Home</a></li>
             <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
             <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#services">Services</a></li>
             <li><a href="#faq">FAQ</a></li>
-            <li><a href="#team">Team</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
           <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
@@ -97,11 +96,7 @@
         </div>
       </section>
       <!-- /Hero Section -->
-
-      <!-- Icons Info Section -->
-
-      <!-- /Icons Info Section -->
-
+       
       <!-- About Section -->
       <section id="about" class="about section">
         <div class="container">
@@ -173,116 +168,6 @@
       </section>
       <!-- /About Section -->
 
-      <!-- Services Section -->
-      <section id="services" class="services section">
-        <!-- Section Title -->
-        <div class="container section-title" data-aos="fade-up">
-          <h2>Services</h2>
-          <p>
-            We offer everything you need to enjoy a relaxing and active stay
-          </p>
-        </div>
-        <!-- End Section Title -->
-
-        <div class="container">
-          <div class="row gy-4">
-            <div
-              class="col-xl-3 col-md-6 d-flex"
-              data-aos="fade-up"
-              data-aos-delay="100"
-            >
-              <div class="service-item position-relative">
-                <div class="icon"><i class="bi bi-water icon"></i></div>
-                <h4>Private pool & garden</h4>
-                <p>
-                  Relax with your own pool, sunbeds, BBQ and open-air dining in
-                  a natural setting
-                </p>
-              </div>
-            </div>
-            <!-- End Service Item -->
-
-            <div
-              class="col-xl-3 col-md-6 d-flex"
-              data-aos="fade-up"
-              data-aos-delay="400"
-            >
-              <div class="service-item position-relative">
-                <div class="icon"><i class="bi bi-trophy icon"></i></div>
-                <h4>Play & sports zone</h4>
-                <p>
-                  Minigolf, basketball, badminton, swings and a handmade wooden
-                  playhouse
-                </p>
-              </div>
-            </div>
-            <!-- End Service Item -->
-
-            <div
-              class="col-xl-3 col-md-6 d-flex"
-              data-aos="fade-up"
-              data-aos-delay="300"
-            >
-              <div class="service-item position-relative">
-                <div class="icon"><i class="bi bi-cup-hot icon"></i></div>
-                <h4>Full kitchen access</h4>
-                <p>
-                  Indoor and outdoor kitchens with appliances and cooking
-                  essentials
-                </p>
-              </div>
-            </div>
-            <!-- End Service Item -->
-
-            <div
-              class="col-xl-3 col-md-6 d-flex"
-              data-aos="fade-up"
-              data-aos-delay="200"
-            >
-              <div class="service-item position-relative">
-                <div class="icon"><i class="bi bi-emoji-smile icon"></i></div>
-                <h4>Family-friendly gear</h4>
-                <p>
-                  Cribs, high chairs, toys, games and more — all ready for
-                  families
-                </p>
-              </div>
-            </div>
-            <!-- End Service Item -->
-          </div>
-        </div>
-      </section>
-      <!-- /Services Section -->
-
-      <!-- Call To Action Section -->
-      <section
-        id="call-to-action"
-        class="call-to-action section accent-background"
-      >
-        <img src="assets/img/cta/cta-bg.webp" alt="" />
-
-        <div class="container">
-          <div
-            class="row justify-content-center"
-            data-aos="zoom-in"
-            data-aos-delay="100"
-          >
-            <div class="col-xl-10">
-              <div class="text-center">
-                <h3>Ready to live a unique experience in Es Serval?</h3>
-                <p>
-                  Don't hesitate to contact us for more information or to make
-                  your reservation, we are here to help you plan your next
-                  getaway!
-                </p>
-                <a class="cta-btn" href="#contact">Contact us</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- /Call To Action Section -->
-
       <!-- Portfolio Section -->
       <section id="portfolio" class="portfolio section">
         <!-- Section Title -->
@@ -299,7 +184,7 @@
           <div class="portfolio-desktop">
             <div
               class="isotope-layout"
-              data-default-filter="*"
+              data-default-filter=".filter-outdoors"
               data-layout="fitRows"
               data-sort="original-order"
             >
@@ -308,8 +193,7 @@
                 data-aos="fade-up"
                 data-aos-delay="100"
               >
-                <li data-filter="*" class="filter-active">All</li>
-                <li data-filter=".filter-outdoors">Outdoors</li>
+                <li data-filter=".filter-outdoors" class="filter-active">Outdoors</li>
                 <li data-filter=".filter-livingroom">Living room</li>
                 <li data-filter=".filter-kitchen">Kitchen</li>
                 <li data-filter=".filter-diningroom">Dining rooms</li>
@@ -318,6 +202,7 @@
                 <li data-filter=".filter-swimmingpool">Swimming pool</li>
                 <li data-filter=".filter-sportsarea">Sports area</li>
                 <li data-filter=".filter-kidscastle">Kids castle</li>
+                <li data-filter="*" >All</li>
               </ul>
               <!-- End Portfolio Filters -->
 
@@ -1175,6 +1060,35 @@
       </section>
       <!-- /Portfolio Section -->
 
+      <!-- Call To Action Section -->
+      <section
+        id="call-to-action"
+        class="call-to-action section accent-background"
+      >
+        <img src="assets/img/cta/cta-bg.webp" alt="" />
+
+        <div class="container">
+          <div
+            class="row justify-content-center"
+            data-aos="zoom-in"
+            data-aos-delay="100"
+          >
+            <div class="col-xl-10">
+              <div class="text-center">
+                <h3>Ready to live a unique experience in Es Serval?</h3>
+                <p>
+                  Don't hesitate to contact us for more information or to make
+                  your reservation, we are here to help you plan your next
+                  getaway!
+                </p>
+                <a class="cta-btn" href="#contact">Contact us</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /Call To Action Section -->
+
       <!-- Testimonials Section -->
       <section id="testimonials" class="testimonials section light-background">
         <!-- Section Title -->
@@ -1496,60 +1410,168 @@
       </section>
       <!-- /Testimonials Section -->
 
-          <!-- Team Section -->
-    <section id="team" class="team section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Team</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row gy-5">
-
-          <div class="col-xl-4 col-md-6 d-flex" data-aos="zoom-in" data-aos-delay="200">
-            <div class="team-member">
-              <div class="member-img">
-                <img src="assets/img/team/Bjorn.jpg" class="img-fluid" alt="">
-              </div>
-              <div class="member-info">
-                <h4>Bjorn San Pedro</h4>
-                <span>Manager</span>
-              </div>
-            </div>
-          </div><!-- End Team Member -->
-
-          <div class="col-xl-4 col-md-6 d-flex" data-aos="zoom-in" data-aos-delay="400">
-            <div class="team-member">
-              <div class="member-img">
-                <img src="assets/img/team/Bjorn.jpg" class="img-fluid" alt="">
-              </div>
-              <div class="member-info">
-                <h4>Otro San Pedro</h4>
-                <span>El que riega</span>
-              </div>
-            </div>
-          </div><!-- End Team Member -->
-
-          <div class="col-xl-4 col-md-6 d-flex" data-aos="zoom-in" data-aos-delay="600">
-            <div class="team-member">
-              <div class="member-img">
-                <img src="assets/img/team/Bjorn.jpg" class="img-fluid" alt="">
-              </div>
-              <div class="member-info">
-                <h4>Último San Pedro</h4>
-                <span>Piscinero</span>
-              </div>
-            </div>
-          </div><!-- End Team Member -->
-
+      <!-- Services Section -->
+      <section id="services" class="services section">
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <h2>Services</h2>
+          <p>
+            We offer everything you need to enjoy a relaxing and active stay
+          </p>
         </div>
+        <!-- End Section Title -->
 
-      </div>
+        <div class="container">
+          <div class="row gy-4">
+            <div
+              class="col-xl-3 col-md-6 d-flex"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div class="service-item position-relative">
+                <div class="icon"><i class="bi bi-water icon"></i></div>
+                <h4>Private pool & garden</h4>
+                <p>
+                  Relax with your own pool, sunbeds, BBQ and open-air dining in
+                  a natural setting
+                </p>
+              </div>
+            </div>
+            <!-- End Service Item -->
 
-    </section><!-- /Team Section -->
+            <div
+              class="col-xl-3 col-md-6 d-flex"
+              data-aos="fade-up"
+              data-aos-delay="400"
+            >
+              <div class="service-item position-relative">
+                <div class="icon"><i class="bi bi-trophy icon"></i></div>
+                <h4>Play & sports zone</h4>
+                <p>
+                  Minigolf, basketball, badminton, swings and a handmade wooden
+                  playhouse
+                </p>
+              </div>
+            </div>
+            <!-- End Service Item -->
+
+            <div
+              class="col-xl-3 col-md-6 d-flex"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
+              <div class="service-item position-relative">
+                <div class="icon"><i class="bi bi-cup-hot icon"></i></div>
+                <h4>Full kitchen access</h4>
+                <p>
+                  Indoor and outdoor kitchens with appliances and cooking
+                  essentials
+                </p>
+              </div>
+            </div>
+            <!-- End Service Item -->
+
+            <div
+              class="col-xl-3 col-md-6 d-flex"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <div class="service-item position-relative">
+                <div class="icon"><i class="bi bi-emoji-smile icon"></i></div>
+                <h4>Family-friendly gear</h4>
+                <p>
+                  Cribs, high chairs, toys, games and more — all ready for
+                  families
+                </p>
+              </div>
+            </div>
+            <!-- End Service Item -->
+          </div>
+        </div>
+      </section>
+      <!-- /Services Section -->
+
+      <!-- Team Section -->
+      <section id="team" class="team section">
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <h2>Team</h2>
+          <p>
+            A team committed to providing you with a unique and relaxing
+            experience at our family finca, ensuring that every moment is
+            special
+          </p>
+        </div>
+        <!-- End Section Title -->
+
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <div class="row gy-5">
+            <div
+              class="col-xl-4 col-md-6 d-flex"
+              data-aos="zoom-in"
+              data-aos-delay="200"
+            >
+              <div class="team-member">
+                <div class="member-img">
+                  <img
+                    src="assets/img/team/Bjorn.jpg"
+                    class="img-fluid"
+                    alt=""
+                  />
+                </div>
+                <div class="member-info">
+                  <h4>Bjorn San Pedro</h4>
+                  <span>Manager</span>
+                </div>
+              </div>
+            </div>
+            <!-- End Team Member -->
+
+            <div
+              class="col-xl-4 col-md-6 d-flex"
+              data-aos="zoom-in"
+              data-aos-delay="400"
+            >
+              <div class="team-member">
+                <div class="member-img">
+                  <img
+                    src="assets/img/team/Bjorn.jpg"
+                    class="img-fluid"
+                    alt=""
+                  />
+                </div>
+                <div class="member-info">
+                  <h4>Otro San Pedro</h4>
+                  <span>El que riega</span>
+                </div>
+              </div>
+            </div>
+            <!-- End Team Member -->
+
+            <div
+              class="col-xl-4 col-md-6 d-flex"
+              data-aos="zoom-in"
+              data-aos-delay="600"
+            >
+              <div class="team-member">
+                <div class="member-img">
+                  <img
+                    src="assets/img/team/Bjorn.jpg"
+                    class="img-fluid"
+                    alt=""
+                  />
+                </div>
+                <div class="member-info">
+                  <h4>Último San Pedro</h4>
+                  <span>Piscinero</span>
+                </div>
+              </div>
+            </div>
+            <!-- End Team Member -->
+          </div>
+        </div>
+      </section>
+      <!-- /Team Section -->
 
       <!-- Faq Section -->
       <section id="faq" class="faq section light-background">
