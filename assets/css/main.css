@@ -860,7 +860,95 @@ section,
     transform: translateY(-5px);
   }
 }
+/* -------------------------------------------------------------
+# Calendar Section
+--------------------------------------------------------------*/
+#calendar {
+  max-width: 100%;
+  margin: 0 auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+}
 
+/* Aplica Roboto a absolutamente todo dentro del calendario */
+#calendar,
+#calendar *:not(.fc-icon):not(.fc-icon::before) {
+  font-family: "Roboto", sans-serif !important;
+}
+
+.fc .fc-daygrid-day.fc-day-today {
+  background-color: #e3f2fd;
+}
+
+.fc .fc-button-primary {
+  background-color: #67b0d1; /* tu color corporativo */
+  border-color: #67b0d1;
+  color: #ffffff;
+}
+
+.fc-col-header-cell-cushion {
+  color: #2b2b2b;
+  font-weight: 400;
+}
+
+.fc .fc-col-header-cell-cushion:hover {
+  color: #2b2b2b;
+  text-decoration: none;
+}
+
+.fc-multimonth-title {
+  color: #2f4d5a;
+}
+
+.fc .fc-daygrid-day-number {
+  color: #444444;
+  opacity: 0.8; /* Ajusta este valor entre 0 (transparente) y 1 (opaco) */
+  text-decoration: none;
+  pointer-events: none; /* hace que no respondan al hover/click */
+}
+
+.fc .fc-daygrid-day-number:hover {
+  color: #444444;
+  text-decoration: none;
+}
+
+.fc-daygrid-day-top {
+  justify-content: center; /* centra horizontalmente */
+  align-items: center; /* centra verticalmente */
+  height: 100%; /* asegura altura completa */
+  display: flex; /* activa el centrado */
+}
+
+.fc-daygrid-day-frame {
+  display: flex;
+  align-items: center; /* centra verticalmente */
+  justify-content: center; /* centra horizontalmente */
+  height: 100%;
+}
+
+.fc-theme-standard td,
+.fc-theme-standard th {
+  border: none;
+}
+
+.fc {
+  font-family: "Roboto", sans-serif; /* o la fuente que uses */
+  font-size: 14px; /* ajusta al resto de la página */
+}
+
+/* Quitar borde gris de enfoque en botones al hacer clic */
+.fc .fc-button:focus,
+.fc .fc-button:active,
+.fc .fc-button-primary:focus,
+.fc .fc-button-primary:active {
+  outline: none;
+  box-shadow: none;
+  background-color: #67b0d1; /* Mantiene tu color principal */
+  border-color: #67b0d1;
+  color: #fff;
+}
 /*--------------------------------------------------------------
 # About Section
 --------------------------------------------------------------*/

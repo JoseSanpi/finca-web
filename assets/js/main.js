@@ -92,13 +92,22 @@
    */
   function aosInit() {
     AOS.init({
-      duration: 600,
-      easing: 'ease-in-out',
-      once: true,
-      mirror: false
+      offset: 20, // Reducido para que los elementos aparezcan antes
+      duration: 600, // Duración de la animación (ms)
+      easing: 'ease-out',
+      once: true, // Solo se anima una vez
+      mirror: false // No se vuelve a animar al hacer scroll hacia arriba
     });
   }
   window.addEventListener('load', aosInit);
+
+  
+
+  // Fuerza un refresco completo tras 'load' y un pequeño retardo
+  window.addEventListener('load', () => {
+    AOS.refreshHard();        // Refresca offsets y elementos
+    setTimeout(AOS.refresh, 200); // Retardo para asegurarlo
+  });
 
   /**
    * Initiate Pure Counter
@@ -176,11 +185,11 @@
       { src: 'assets/img/bedroomB/BedroomB1_thumb.webp', title: 'BedroomB', text: 'Second bedroom', full: 'assets/img/bedroomB/BedroomB1.webp' },
       { src: 'assets/img/bedroomB/BedroomB2_thumb.webp', title: 'BedroomB', text: 'Second bedroom', full: 'assets/img/bedroomB/BedroomB2.webp' },
       { src: 'assets/img/bedroomB/BedroomB3_thumb.webp', title: 'BedroomB', text: 'Second bedroom', full: 'assets/img/bedroomB/BedroomB3.webp' },
-      { src: 'assets/img/bedroomC/BedroomC1_thumb.webp', title: 'CedroomC', text: 'Third bedroom', full: 'assets/img/bedroomC/BedroomC1.webp' },
-      { src: 'assets/img/bedroomC/BedroomC2_thumb.webp', title: 'CedroomC', text: 'Third bedroom', full: 'assets/img/bedroomC/BedroomC2.webp' },
-      { src: 'assets/img/bedroomC/BedroomC3_thumb.webp', title: 'CedroomC', text: 'Third bedroom', full: 'assets/img/bedroomC/BedroomC3.webp' },
-      { src: 'assets/img/bedroomC/BedroomC4_thumb.webp', title: 'CedroomC', text: 'Third bedroom', full: 'assets/img/bedroomC/BedroomC4.webp' },
-      { src: 'assets/img/bedroomC/BedroomC5_thumb.webp', title: 'CedroomC', text: 'Third bedroom', full: 'assets/img/bedroomC/BedroomC5.webp' },
+      { src: 'assets/img/bedroomC/BedroomC1_thumb.webp', title: 'BedroomC', text: 'Third bedroom', full: 'assets/img/bedroomC/BedroomC1.webp' },
+      { src: 'assets/img/bedroomC/BedroomC2_thumb.webp', title: 'BedroomC', text: 'Third bedroom', full: 'assets/img/bedroomC/BedroomC2.webp' },
+      { src: 'assets/img/bedroomC/BedroomC3_thumb.webp', title: 'BedroomC', text: 'Third bedroom', full: 'assets/img/bedroomC/BedroomC3.webp' },
+      { src: 'assets/img/bedroomC/BedroomC4_thumb.webp', title: 'BedroomC', text: 'Third bedroom', full: 'assets/img/bedroomC/BedroomC4.webp' },
+      { src: 'assets/img/bedroomC/BedroomC5_thumb.webp', title: 'BedroomC', text: 'Third bedroom', full: 'assets/img/bedroomC/BedroomC5.webp' },
       { src: 'assets/img/bathrooms/BathroomMain_thumb.webp', title: 'Outdoors', text: 'Main bathroom', full: 'assets/img/bathrooms/BathroomMain.webp' },
       { src: 'assets/img/bathrooms/BathroomBeds_thumb.webp', title: 'Outdoors', text: 'Beds bathroom', full: 'assets/img/bathrooms/BathroomBeds.webp' },
       { src: 'assets/img/swimmingpool/Swimmingpool1_thumb.webp', title: 'Swimmingpool', text: 'Aerial swimmingpool', full: 'assets/img/swimmingpool/Swimmingpool1.webp' },
@@ -355,17 +364,36 @@
   window.addEventListener('load', navmenuScrollspy);
   document.addEventListener('scroll', navmenuScrollspy);
 
-   // Inicializa AOS con opciones
-   AOS.init({
-    offset: 5, // antes: 120
-    duration: 600,   // Duración de la animación
-    once: true       // Ejecuta la animación solo una vez
-  });
+  document.addEventListener("DOMContentLoaded", function () {
+    const calendarEl = document.getElementById("calendar");
 
-  // Fuerza un refresco completo tras 'load' y un pequeño retardo
-  window.addEventListener('load', () => {
-    AOS.refreshHard();        // Refresca offsets y elementos
-    setTimeout(AOS.refresh, 200); // Retardo para asegurarlo
+    const isMobile = window.innerWidth <= 768;
+
+    const calendar = new FullCalendar.Calendar(calendarEl, {
+      initialView: isMobile ? "dayGridMonth" : "multiMonthThreeMonth",
+      height: "auto",
+      headerToolbar: {
+        left: "prev",
+        center: "title",
+        right: "next",
+      },
+      views: {
+        multiMonthThreeMonth: {
+          type: "multiMonth",
+          duration: { months: 3 },
+        },
+      },
+      events: [
+        {
+          start: "2025-05-01",
+          end: "2025-10-27",
+          display: "background",
+          color: "#ffb3b3",
+        },
+      ],
+    });
+
+    calendar.render();
   });
   
 
