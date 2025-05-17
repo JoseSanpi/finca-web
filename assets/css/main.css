@@ -863,6 +863,16 @@ section,
 /* -------------------------------------------------------------
 # Calendar Section
 --------------------------------------------------------------*/
+
+/* Quita el borde y el box-shadow del contenedor principal del calendario */
+#calendar .fc,
+#calendar .fc-theme-standard,
+#calendar .fc-scrollgrid,
+#calendar .fc-multimonth-multicol {
+  border: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
+}
 #calendar {
   max-width: 100%;
   margin: 0 auto;
@@ -949,6 +959,8 @@ section,
   border-color: #67b0d1;
   color: #fff;
 }
+
+
 /*--------------------------------------------------------------
 # About Section
 --------------------------------------------------------------*/
