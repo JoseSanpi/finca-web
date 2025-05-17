@@ -864,6 +864,12 @@ section,
 # Calendar Section
 --------------------------------------------------------------*/
 
+
+/* O quita el padding-top solo en Availability */
+#availability {
+  padding-top: 20px; /* O el valor que prefieras */
+}
+
 /* Quita el borde y el box-shadow del contenedor principal del calendario */
 #calendar .fc,
 #calendar .fc-theme-standard,
