@@ -306,6 +306,25 @@ h6 {
     left: -100%;
     visibility: visible;
   }
+
+  .navmenu .contact-cta {
+    background-color: var(--nav-hover-color);
+    color: var(--contrast-color) !important;
+    border: 2px solid var(--contrast-color);
+    border-radius: 6px;
+    padding: 10px 22px;
+    margin-left: 10px;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(33, 37, 41, 0.06);
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  }
+  .navmenu .contact-cta:hover,
+  .navmenu .contact-cta:focus {
+    background-color: var(--contrast-color);
+    color: var(--nav-hover-color) !important;
+    box-shadow: 0 4px 16px rgba(33, 37, 41, 0.12);
+    text-decoration: none;
+  }
 }
 
 /* Mobile Navigation */
@@ -432,6 +451,15 @@ h6 {
 
   .mobile-nav-active .navmenu>ul {
     display: block;
+  }
+
+  .navmenu .contact-cta {
+    background-color: var(--nav-hover-color);
+    color: var(--contrast-color) !important;
+    border-radius: 6px;
+    border: 2px solid var(--contrast-color);
+    margin: 10px 0;
+    font-weight: 600;
   }
 }
 
@@ -965,6 +993,36 @@ section,
 }
 
 
+
+
+
+
+
+.flatpickr-calendar {
+  background: var(--background-color) !important;
+  color: var(--default-color) !important;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.flatpickr-day.selected {
+  background: var(--accent-color) !important;
+  border-color: var(--accent-color) !important;
+}
+
+.flatpickr-day.disabled {
+  color: #ffb3b3 !important;
+  background: rgba(255, 179, 179, 0.1);
+}
+
+/* Resalta el día de Check-in en el calendario de Check-out */
+.flatpickr-day.checkin-highlight {
+  background: #67b0d1 !important;
+  color: #fff !important;
+  border-radius: 50% !important;
+  border: 2px solid #67b0d1 !important;
+  opacity: 0.7;
+}
+
 /*--------------------------------------------------------------
 # About Section
 --------------------------------------------------------------*/
@@ -1224,7 +1282,6 @@ section,
 /*--------------------------------------------------------------
 # Portfolio Section
 --------------------------------------------------------------*/
-
 
 .portfolio-mobile .form-select {
   appearance: none;
@@ -1873,4 +1930,29 @@ section,
 
 .contact .php-email-form button[type=submit]:hover {
   background: color-mix(in srgb, var(--accent-color), transparent 25%);
+}
+
+.form-control {
+  border: none;
+  border-bottom: 2px solid #ccc;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  outline: none;
+  transition: border-color 0.2s;
+  font-size: 1.1em;
+  padding: 10px 8px 8px 0;
+}
+
+.form-control:focus {
+  border-bottom: 2px solid #117228;
+  background: transparent;
+  box-shadow: none;
+}
+
+label.pb-2 {
+  font-weight: 500;
+  color: var(--heading-color);
+  margin-bottom: 0.2em;
+  letter-spacing: 0.01em;
 }

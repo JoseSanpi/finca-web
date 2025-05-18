@@ -1,12 +1,12 @@
 /**
-* Template Name: Squadfree
-* Template URL: https://bootstrapmade.com/squadfree-free-bootstrap-template-creative/
-* Updated: Aug 07 2024 with Bootstrap v5.3.3
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
+ * Template Name: Squadfree
+ * Template URL: https://bootstrapmade.com/squadfree-free-bootstrap-template-creative/
+ * Updated: Aug 07 2024 with Bootstrap v5.3.3
+ * Author: BootstrapMade.com
+ * License: https://bootstrapmade.com/license/
+ */
 
-(function() {
+(function () {
   "use strict";
 
   /**
@@ -15,7 +15,7 @@
   function toggleScrolled() {
     document.body.classList.toggle('scrolled', window.scrollY > 100);
   }
-  
+
 
   document.addEventListener('scroll', toggleScrolled);
   window.addEventListener('load', toggleScrolled);
@@ -48,7 +48,7 @@
    * Toggle mobile nav dropdowns
    */
   document.querySelectorAll('.navmenu .toggle-dropdown').forEach(navmenu => {
-    navmenu.addEventListener('click', function(e) {
+    navmenu.addEventListener('click', function (e) {
       e.preventDefault();
       this.parentNode.classList.toggle('active');
       this.parentNode.nextElementSibling.classList.toggle('dropdown-active');
@@ -101,11 +101,11 @@
   }
   window.addEventListener('load', aosInit);
 
-  
+
 
   // Fuerza un refresco completo tras 'load' y un pequeño retardo
   window.addEventListener('load', () => {
-    AOS.refreshHard();        // Refresca offsets y elementos
+    AOS.refreshHard(); // Refresca offsets y elementos
     setTimeout(AOS.refresh, 200); // Retardo para asegurarlo
   });
 
@@ -124,13 +124,13 @@
   /**
    * Init isotope layout and filters
    */
-  document.querySelectorAll('.isotope-layout').forEach(function(isotopeItem) {
+  document.querySelectorAll('.isotope-layout').forEach(function (isotopeItem) {
     let layout = isotopeItem.getAttribute('data-layout') ?? 'masonry';
     let filter = isotopeItem.getAttribute('data-default-filter') ?? '*';
     let sort = isotopeItem.getAttribute('data-sort') ?? 'original-order';
 
     let initIsotope;
-    imagesLoaded(isotopeItem.querySelector('.isotope-container'), function() {
+    imagesLoaded(isotopeItem.querySelector('.isotope-container'), function () {
       initIsotope = new Isotope(isotopeItem.querySelector('.isotope-container'), {
         itemSelector: '.isotope-item',
         layoutMode: layout,
@@ -139,8 +139,8 @@
       });
     });
 
-    isotopeItem.querySelectorAll('.isotope-filters li').forEach(function(filters) {
-      filters.addEventListener('click', function() {
+    isotopeItem.querySelectorAll('.isotope-filters li').forEach(function (filters) {
+      filters.addEventListener('click', function () {
         isotopeItem.querySelector('.isotope-filters .filter-active').classList.remove('filter-active');
         this.classList.add('filter-active');
         initIsotope.arrange({
@@ -161,103 +161,483 @@
 
 
   const portfolioImages = {
-    all: [
-      { src: 'assets/img/outdoors/Outdoors1_thumb.webp', title: 'Outdoors', text: 'Aerial outdoors', full: 'assets/img/outdoors/Outdoors1.webp' },
-      { src: 'assets/img/outdoors/Outdoors2_thumb.webp', title: 'Outdoors', text: 'Aerial outdoors', full: 'assets/img/outdoors/Outdoors2.webp' },
-      { src: 'assets/img/outdoors/Outdoors3_thumb.webp', title: 'Outdoors', text: 'Aerial outdoors', full: 'assets/img/outdoors/Outdoors3.webp' },
-      { src: 'assets/img/livingroom/livingroom1_thumb.webp', title: 'Living Room', text: 'Main living room', full: 'assets/img/livingroom/livingroom1.webp' },
-      { src: 'assets/img/livingroom/livingroom2_thumb.webp', title: 'Living Room', text: 'Main living room', full: 'assets/img/livingroom/livingroom2.webp' },
-      { src: 'assets/img/livingroom/livingroom3_thumb.webp', title: 'Living Room', text: 'Main living room', full: 'assets/img/livingroom/livingroom3.webp' },
-      { src: 'assets/img/kitchen/Kitchen1_thumb.webp', title: 'Kitchen', text: 'Kitchen', full: 'assets/img/kitchen/Kitchen1.webp' },
-      { src: 'assets/img/kitchen/Kitchen2_thumb.webp', title: 'Kitchen', text: 'Kitchen', full: 'assets/img/kitchen/Kitchen2.webp' },
-      { src: 'assets/img/kitchen/Kitchen3_thumb.webp', title: 'Kitchen', text: 'Kitchen', full: 'assets/img/kitchen/Kitchen3.webp' },
-      { src: 'assets/img/diningroom/Diningroom2_thumb.webp', title: 'Diningroom', text: 'Diningroom', full: 'assets/img/diningroom/Diningroom2.webp' },
-      { src: 'assets/img/diningroom/Diningroom3_thumb.webp', title: 'Diningroom', text: 'Diningroom', full: 'assets/img/diningroom/Diningroom3.webp' },
-      { src: 'assets/img/diningroom/Diningroom1_thumb.webp', title: 'Diningroom', text: 'Diningroom', full: 'assets/img/diningroom/Diningroom1.webp' },
-      { src: 'assets/img/diningroom/Diningroom4_thumb.webp', title: 'Diningroom', text: 'Diningroom', full: 'assets/img/diningroom/Diningroom4.webp' },
-      { src: 'assets/img/diningroom/Diningroom5_thumb.webp', title: 'Diningroom', text: 'Diningroom', full: 'assets/img/diningroom/Diningroom5.webp' },
-      { src: 'assets/img/diningroom/Diningroom6_thumb.webp', title: 'Diningroom', text: 'Diningroom', full: 'assets/img/diningroom/Diningroom6.webp' },
-      { src: 'assets/img/diningroom/Diningroom7_thumb.webp', title: 'Diningroom', text: 'Diningroom', full: 'assets/img/diningroom/Diningroom7.webp' },
-      { src: 'assets/img/diningroom/Diningroom8_thumb.webp', title: 'Diningroom', text: 'Diningroom', full: 'assets/img/diningroom/Diningroom8.webp' },
-      { src: 'assets/img/bedroomA/BedroomA1_thumb.webp', title: 'BedroomA', text: 'First bedroom', full: 'assets/img/bedroomA/BedroomA1.webp' },
-      { src: 'assets/img/bedroomA/BedroomA2_thumb.webp', title: 'BedroomA', text: 'First bedroom', full: 'assets/img/bedroomA/BedroomA2.webp' },
-      { src: 'assets/img/bedroomA/BedroomA3_thumb.webp', title: 'BedroomA', text: 'First bedroom', full: 'assets/img/bedroomA/BedroomA3.webp' },
-      { src: 'assets/img/bedroomB/BedroomB1_thumb.webp', title: 'BedroomB', text: 'Second bedroom', full: 'assets/img/bedroomB/BedroomB1.webp' },
-      { src: 'assets/img/bedroomB/BedroomB2_thumb.webp', title: 'BedroomB', text: 'Second bedroom', full: 'assets/img/bedroomB/BedroomB2.webp' },
-      { src: 'assets/img/bedroomB/BedroomB3_thumb.webp', title: 'BedroomB', text: 'Second bedroom', full: 'assets/img/bedroomB/BedroomB3.webp' },
-      { src: 'assets/img/bedroomC/BedroomC1_thumb.webp', title: 'BedroomC', text: 'Third bedroom', full: 'assets/img/bedroomC/BedroomC1.webp' },
-      { src: 'assets/img/bedroomC/BedroomC2_thumb.webp', title: 'BedroomC', text: 'Third bedroom', full: 'assets/img/bedroomC/BedroomC2.webp' },
-      { src: 'assets/img/bedroomC/BedroomC3_thumb.webp', title: 'BedroomC', text: 'Third bedroom', full: 'assets/img/bedroomC/BedroomC3.webp' },
-      { src: 'assets/img/bedroomC/BedroomC4_thumb.webp', title: 'BedroomC', text: 'Third bedroom', full: 'assets/img/bedroomC/BedroomC4.webp' },
-      { src: 'assets/img/bedroomC/BedroomC5_thumb.webp', title: 'BedroomC', text: 'Third bedroom', full: 'assets/img/bedroomC/BedroomC5.webp' },
-      { src: 'assets/img/bathrooms/BathroomMain_thumb.webp', title: 'Outdoors', text: 'Main bathroom', full: 'assets/img/bathrooms/BathroomMain.webp' },
-      { src: 'assets/img/bathrooms/BathroomBeds_thumb.webp', title: 'Outdoors', text: 'Beds bathroom', full: 'assets/img/bathrooms/BathroomBeds.webp' },
-      { src: 'assets/img/swimmingpool/Swimmingpool1_thumb.webp', title: 'Swimmingpool', text: 'Aerial swimmingpool', full: 'assets/img/swimmingpool/Swimmingpool1.webp' },
-      { src: 'assets/img/swimmingpool/Swimmingpool2_thumb.webp', title: 'Swimmingpool', text: 'Aerial swimmingpool', full: 'assets/img/swimmingpool/Swimmingpool2.webp' },
-      { src: 'assets/img/swimmingpool/Swimmingpool3_thumb.webp', title: 'Swimmingpool', text: 'Aerial swimmingpool', full: 'assets/img/swimmingpool/Swimmingpool3.webp' },
-      { src: 'assets/img/swimmingpool/Swimmingpool4_thumb.webp', title: 'Swimmingpool', text: 'Aerial swimmingpool', full: 'assets/img/swimmingpool/Swimmingpool4.webp' },
-      { src: 'assets/img/swimmingpool/Swimmingpool5_thumb.webp', title: 'Swimmingpool', text: 'Aerial swimmingpool', full: 'assets/img/swimmingpool/Swimmingpool5.webp' },
-      { src: 'assets/img/sportsarea/Sportsarea1_thumb.webp', title: 'Sportsarea', text: 'Aerial sportsarea', full: 'assets/img/sportsarea/Sportsarea1.webp' },
-      { src: 'assets/img/sportsarea/Sportsarea2_thumb.webp', title: 'Sportsarea', text: 'Aerial sportsarea', full: 'assets/img/sportsarea/Sportsarea2.webp' },
-      { src: 'assets/img/kidscastle/Kidscastle1_thumb.webp', title: 'Kidscastle', text: 'Aerial kidscastle', full: 'assets/img/kidscastle/Kidscastle1.webp' },
-      { src: 'assets/img/kidscastle/Kidscastle2_thumb.webp', title: 'Kidscastle', text: 'Aerial kidscastle', full: 'assets/img/kidscastle/Kidscastle2.webp' },
+    all: [{
+        src: 'assets/img/outdoors/Outdoors1_thumb.webp',
+        title: 'Outdoors',
+        text: 'Aerial outdoors',
+        full: 'assets/img/outdoors/Outdoors1.webp'
+      },
+      {
+        src: 'assets/img/outdoors/Outdoors2_thumb.webp',
+        title: 'Outdoors',
+        text: 'Aerial outdoors',
+        full: 'assets/img/outdoors/Outdoors2.webp'
+      },
+      {
+        src: 'assets/img/outdoors/Outdoors3_thumb.webp',
+        title: 'Outdoors',
+        text: 'Aerial outdoors',
+        full: 'assets/img/outdoors/Outdoors3.webp'
+      },
+      {
+        src: 'assets/img/livingroom/livingroom1_thumb.webp',
+        title: 'Living Room',
+        text: 'Main living room',
+        full: 'assets/img/livingroom/livingroom1.webp'
+      },
+      {
+        src: 'assets/img/livingroom/livingroom2_thumb.webp',
+        title: 'Living Room',
+        text: 'Main living room',
+        full: 'assets/img/livingroom/livingroom2.webp'
+      },
+      {
+        src: 'assets/img/livingroom/livingroom3_thumb.webp',
+        title: 'Living Room',
+        text: 'Main living room',
+        full: 'assets/img/livingroom/livingroom3.webp'
+      },
+      {
+        src: 'assets/img/kitchen/Kitchen1_thumb.webp',
+        title: 'Kitchen',
+        text: 'Kitchen',
+        full: 'assets/img/kitchen/Kitchen1.webp'
+      },
+      {
+        src: 'assets/img/kitchen/Kitchen2_thumb.webp',
+        title: 'Kitchen',
+        text: 'Kitchen',
+        full: 'assets/img/kitchen/Kitchen2.webp'
+      },
+      {
+        src: 'assets/img/kitchen/Kitchen3_thumb.webp',
+        title: 'Kitchen',
+        text: 'Kitchen',
+        full: 'assets/img/kitchen/Kitchen3.webp'
+      },
+      {
+        src: 'assets/img/diningroom/Diningroom2_thumb.webp',
+        title: 'Diningroom',
+        text: 'Diningroom',
+        full: 'assets/img/diningroom/Diningroom2.webp'
+      },
+      {
+        src: 'assets/img/diningroom/Diningroom3_thumb.webp',
+        title: 'Diningroom',
+        text: 'Diningroom',
+        full: 'assets/img/diningroom/Diningroom3.webp'
+      },
+      {
+        src: 'assets/img/diningroom/Diningroom1_thumb.webp',
+        title: 'Diningroom',
+        text: 'Diningroom',
+        full: 'assets/img/diningroom/Diningroom1.webp'
+      },
+      {
+        src: 'assets/img/diningroom/Diningroom4_thumb.webp',
+        title: 'Diningroom',
+        text: 'Diningroom',
+        full: 'assets/img/diningroom/Diningroom4.webp'
+      },
+      {
+        src: 'assets/img/diningroom/Diningroom5_thumb.webp',
+        title: 'Diningroom',
+        text: 'Diningroom',
+        full: 'assets/img/diningroom/Diningroom5.webp'
+      },
+      {
+        src: 'assets/img/diningroom/Diningroom6_thumb.webp',
+        title: 'Diningroom',
+        text: 'Diningroom',
+        full: 'assets/img/diningroom/Diningroom6.webp'
+      },
+      {
+        src: 'assets/img/diningroom/Diningroom7_thumb.webp',
+        title: 'Diningroom',
+        text: 'Diningroom',
+        full: 'assets/img/diningroom/Diningroom7.webp'
+      },
+      {
+        src: 'assets/img/diningroom/Diningroom8_thumb.webp',
+        title: 'Diningroom',
+        text: 'Diningroom',
+        full: 'assets/img/diningroom/Diningroom8.webp'
+      },
+      {
+        src: 'assets/img/bedroomA/BedroomA1_thumb.webp',
+        title: 'BedroomA',
+        text: 'First bedroom',
+        full: 'assets/img/bedroomA/BedroomA1.webp'
+      },
+      {
+        src: 'assets/img/bedroomA/BedroomA2_thumb.webp',
+        title: 'BedroomA',
+        text: 'First bedroom',
+        full: 'assets/img/bedroomA/BedroomA2.webp'
+      },
+      {
+        src: 'assets/img/bedroomA/BedroomA3_thumb.webp',
+        title: 'BedroomA',
+        text: 'First bedroom',
+        full: 'assets/img/bedroomA/BedroomA3.webp'
+      },
+      {
+        src: 'assets/img/bedroomB/BedroomB1_thumb.webp',
+        title: 'BedroomB',
+        text: 'Second bedroom',
+        full: 'assets/img/bedroomB/BedroomB1.webp'
+      },
+      {
+        src: 'assets/img/bedroomB/BedroomB2_thumb.webp',
+        title: 'BedroomB',
+        text: 'Second bedroom',
+        full: 'assets/img/bedroomB/BedroomB2.webp'
+      },
+      {
+        src: 'assets/img/bedroomB/BedroomB3_thumb.webp',
+        title: 'BedroomB',
+        text: 'Second bedroom',
+        full: 'assets/img/bedroomB/BedroomB3.webp'
+      },
+      {
+        src: 'assets/img/bedroomC/BedroomC1_thumb.webp',
+        title: 'BedroomC',
+        text: 'Third bedroom',
+        full: 'assets/img/bedroomC/BedroomC1.webp'
+      },
+      {
+        src: 'assets/img/bedroomC/BedroomC2_thumb.webp',
+        title: 'BedroomC',
+        text: 'Third bedroom',
+        full: 'assets/img/bedroomC/BedroomC2.webp'
+      },
+      {
+        src: 'assets/img/bedroomC/BedroomC3_thumb.webp',
+        title: 'BedroomC',
+        text: 'Third bedroom',
+        full: 'assets/img/bedroomC/BedroomC3.webp'
+      },
+      {
+        src: 'assets/img/bedroomC/BedroomC4_thumb.webp',
+        title: 'BedroomC',
+        text: 'Third bedroom',
+        full: 'assets/img/bedroomC/BedroomC4.webp'
+      },
+      {
+        src: 'assets/img/bedroomC/BedroomC5_thumb.webp',
+        title: 'BedroomC',
+        text: 'Third bedroom',
+        full: 'assets/img/bedroomC/BedroomC5.webp'
+      },
+      {
+        src: 'assets/img/bathrooms/BathroomMain_thumb.webp',
+        title: 'Outdoors',
+        text: 'Main bathroom',
+        full: 'assets/img/bathrooms/BathroomMain.webp'
+      },
+      {
+        src: 'assets/img/bathrooms/BathroomBeds_thumb.webp',
+        title: 'Outdoors',
+        text: 'Beds bathroom',
+        full: 'assets/img/bathrooms/BathroomBeds.webp'
+      },
+      {
+        src: 'assets/img/swimmingpool/Swimmingpool1_thumb.webp',
+        title: 'Swimmingpool',
+        text: 'Aerial swimmingpool',
+        full: 'assets/img/swimmingpool/Swimmingpool1.webp'
+      },
+      {
+        src: 'assets/img/swimmingpool/Swimmingpool2_thumb.webp',
+        title: 'Swimmingpool',
+        text: 'Aerial swimmingpool',
+        full: 'assets/img/swimmingpool/Swimmingpool2.webp'
+      },
+      {
+        src: 'assets/img/swimmingpool/Swimmingpool3_thumb.webp',
+        title: 'Swimmingpool',
+        text: 'Aerial swimmingpool',
+        full: 'assets/img/swimmingpool/Swimmingpool3.webp'
+      },
+      {
+        src: 'assets/img/swimmingpool/Swimmingpool4_thumb.webp',
+        title: 'Swimmingpool',
+        text: 'Aerial swimmingpool',
+        full: 'assets/img/swimmingpool/Swimmingpool4.webp'
+      },
+      {
+        src: 'assets/img/swimmingpool/Swimmingpool5_thumb.webp',
+        title: 'Swimmingpool',
+        text: 'Aerial swimmingpool',
+        full: 'assets/img/swimmingpool/Swimmingpool5.webp'
+      },
+      {
+        src: 'assets/img/sportsarea/Sportsarea1_thumb.webp',
+        title: 'Sportsarea',
+        text: 'Aerial sportsarea',
+        full: 'assets/img/sportsarea/Sportsarea1.webp'
+      },
+      {
+        src: 'assets/img/sportsarea/Sportsarea2_thumb.webp',
+        title: 'Sportsarea',
+        text: 'Aerial sportsarea',
+        full: 'assets/img/sportsarea/Sportsarea2.webp'
+      },
+      {
+        src: 'assets/img/kidscastle/Kidscastle1_thumb.webp',
+        title: 'Kidscastle',
+        text: 'Aerial kidscastle',
+        full: 'assets/img/kidscastle/Kidscastle1.webp'
+      },
+      {
+        src: 'assets/img/kidscastle/Kidscastle2_thumb.webp',
+        title: 'Kidscastle',
+        text: 'Aerial kidscastle',
+        full: 'assets/img/kidscastle/Kidscastle2.webp'
+      },
     ],
-    outdoors: [
-      { src: 'assets/img/outdoors/Outdoors1_thumb.webp', title: 'Outdoors', text: 'Aerial outdoors', full: 'assets/img/outdoors/Outdoors1.webp' },
-      { src: 'assets/img/outdoors/Outdoors2_thumb.webp', title: 'Outdoors', text: 'Aerial outdoors', full: 'assets/img/outdoors/Outdoors2.webp' },
-      { src: 'assets/img/outdoors/Outdoors3_thumb.webp', title: 'Outdoors', text: 'Aerial outdoors', full: 'assets/img/outdoors/Outdoors3.webp' }
+    outdoors: [{
+        src: 'assets/img/outdoors/Outdoors1_thumb.webp',
+        title: 'Outdoors',
+        text: 'Aerial outdoors',
+        full: 'assets/img/outdoors/Outdoors1.webp'
+      },
+      {
+        src: 'assets/img/outdoors/Outdoors2_thumb.webp',
+        title: 'Outdoors',
+        text: 'Aerial outdoors',
+        full: 'assets/img/outdoors/Outdoors2.webp'
+      },
+      {
+        src: 'assets/img/outdoors/Outdoors3_thumb.webp',
+        title: 'Outdoors',
+        text: 'Aerial outdoors',
+        full: 'assets/img/outdoors/Outdoors3.webp'
+      }
     ],
-    livingroom: [
-      { src: 'assets/img/livingroom/livingroom1_thumb.webp', title: 'Living Room', text: 'Main living room', full: 'assets/img/livingroom/livingroom1.webp' },
-      { src: 'assets/img/livingroom/livingroom2_thumb.webp', title: 'Living Room', text: 'Main living room', full: 'assets/img/livingroom/livingroom2.webp' },
-      { src: 'assets/img/livingroom/livingroom3_thumb.webp', title: 'Living Room', text: 'Main living room', full: 'assets/img/livingroom/livingroom3.webp' }
+    livingroom: [{
+        src: 'assets/img/livingroom/livingroom1_thumb.webp',
+        title: 'Living Room',
+        text: 'Main living room',
+        full: 'assets/img/livingroom/livingroom1.webp'
+      },
+      {
+        src: 'assets/img/livingroom/livingroom2_thumb.webp',
+        title: 'Living Room',
+        text: 'Main living room',
+        full: 'assets/img/livingroom/livingroom2.webp'
+      },
+      {
+        src: 'assets/img/livingroom/livingroom3_thumb.webp',
+        title: 'Living Room',
+        text: 'Main living room',
+        full: 'assets/img/livingroom/livingroom3.webp'
+      }
     ],
-    kitchen: [
-      { src: 'assets/img/kitchen/Kitchen1_thumb.webp', title: 'Kitchen', text: 'Kitchen', full: 'assets/img/kitchen/Kitchen1.webp' },
-      { src: 'assets/img/kitchen/Kitchen2_thumb.webp', title: 'Kitchen', text: 'Kitchen', full: 'assets/img/kitchen/Kitchen2.webp' },
-      { src: 'assets/img/kitchen/Kitchen3_thumb.webp', title: 'Kitchen', text: 'Kitchen', full: 'assets/img/kitchen/Kitchen3.webp' }
+    kitchen: [{
+        src: 'assets/img/kitchen/Kitchen1_thumb.webp',
+        title: 'Kitchen',
+        text: 'Kitchen',
+        full: 'assets/img/kitchen/Kitchen1.webp'
+      },
+      {
+        src: 'assets/img/kitchen/Kitchen2_thumb.webp',
+        title: 'Kitchen',
+        text: 'Kitchen',
+        full: 'assets/img/kitchen/Kitchen2.webp'
+      },
+      {
+        src: 'assets/img/kitchen/Kitchen3_thumb.webp',
+        title: 'Kitchen',
+        text: 'Kitchen',
+        full: 'assets/img/kitchen/Kitchen3.webp'
+      }
     ],
-    diningroom: [
-      { src: 'assets/img/diningroom/Diningroom2_thumb.webp', title: 'Diningroom', text: 'Diningroom', full: 'assets/img/diningroom/Diningroom2.webp' },
-      { src: 'assets/img/diningroom/Diningroom3_thumb.webp', title: 'Diningroom', text: 'Diningroom', full: 'assets/img/diningroom/Diningroom3.webp' },
-      { src: 'assets/img/diningroom/Diningroom1_thumb.webp', title: 'Diningroom', text: 'Diningroom', full: 'assets/img/diningroom/Diningroom1.webp' },
-      { src: 'assets/img/diningroom/Diningroom4_thumb.webp', title: 'Diningroom', text: 'Diningroom', full: 'assets/img/diningroom/Diningroom4.webp' },
-      { src: 'assets/img/diningroom/Diningroom5_thumb.webp', title: 'Diningroom', text: 'Diningroom', full: 'assets/img/diningroom/Diningroom5.webp' },
-      { src: 'assets/img/diningroom/Diningroom6_thumb.webp', title: 'Diningroom', text: 'Diningroom', full: 'assets/img/diningroom/Diningroom6.webp' },
-      { src: 'assets/img/diningroom/Diningroom7_thumb.webp', title: 'Diningroom', text: 'Diningroom', full: 'assets/img/diningroom/Diningroom7.webp' },
-      { src: 'assets/img/diningroom/Diningroom8_thumb.webp', title: 'Diningroom', text: 'Diningroom', full: 'assets/img/diningroom/Diningroom8.webp' }
+    diningroom: [{
+        src: 'assets/img/diningroom/Diningroom2_thumb.webp',
+        title: 'Diningroom',
+        text: 'Diningroom',
+        full: 'assets/img/diningroom/Diningroom2.webp'
+      },
+      {
+        src: 'assets/img/diningroom/Diningroom3_thumb.webp',
+        title: 'Diningroom',
+        text: 'Diningroom',
+        full: 'assets/img/diningroom/Diningroom3.webp'
+      },
+      {
+        src: 'assets/img/diningroom/Diningroom1_thumb.webp',
+        title: 'Diningroom',
+        text: 'Diningroom',
+        full: 'assets/img/diningroom/Diningroom1.webp'
+      },
+      {
+        src: 'assets/img/diningroom/Diningroom4_thumb.webp',
+        title: 'Diningroom',
+        text: 'Diningroom',
+        full: 'assets/img/diningroom/Diningroom4.webp'
+      },
+      {
+        src: 'assets/img/diningroom/Diningroom5_thumb.webp',
+        title: 'Diningroom',
+        text: 'Diningroom',
+        full: 'assets/img/diningroom/Diningroom5.webp'
+      },
+      {
+        src: 'assets/img/diningroom/Diningroom6_thumb.webp',
+        title: 'Diningroom',
+        text: 'Diningroom',
+        full: 'assets/img/diningroom/Diningroom6.webp'
+      },
+      {
+        src: 'assets/img/diningroom/Diningroom7_thumb.webp',
+        title: 'Diningroom',
+        text: 'Diningroom',
+        full: 'assets/img/diningroom/Diningroom7.webp'
+      },
+      {
+        src: 'assets/img/diningroom/Diningroom8_thumb.webp',
+        title: 'Diningroom',
+        text: 'Diningroom',
+        full: 'assets/img/diningroom/Diningroom8.webp'
+      }
     ],
-    bedroom: [
-      { src: 'assets/img/bedroomA/BedroomA1_thumb.webp', title: 'BedroomA', text: 'First bedroom', full: 'assets/img/bedroomA/BedroomA1.webp' },
-      { src: 'assets/img/bedroomA/BedroomA2_thumb.webp', title: 'BedroomA', text: 'First bedroom', full: 'assets/img/bedroomA/BedroomA2.webp' },
-      { src: 'assets/img/bedroomA/BedroomA3_thumb.webp', title: 'BedroomA', text: 'First bedroom', full: 'assets/img/bedroomA/BedroomA3.webp' },
-      { src: 'assets/img/bedroomB/BedroomB1_thumb.webp', title: 'BedroomB', text: 'Second bedroom', full: 'assets/img/bedroomB/BedroomB1.webp' },
-      { src: 'assets/img/bedroomB/BedroomB2_thumb.webp', title: 'BedroomB', text: 'Second bedroom', full: 'assets/img/bedroomB/BedroomB2.webp' },
-      { src: 'assets/img/bedroomB/BedroomB3_thumb.webp', title: 'BedroomB', text: 'Second bedroom', full: 'assets/img/bedroomB/BedroomB3.webp' },
-      { src: 'assets/img/bedroomC/BedroomC1_thumb.webp', title: 'CedroomC', text: 'Third bedroom', full: 'assets/img/bedroomC/BedroomC1.webp' },
-      { src: 'assets/img/bedroomC/BedroomC2_thumb.webp', title: 'CedroomC', text: 'Third bedroom', full: 'assets/img/bedroomC/BedroomC2.webp' },
-      { src: 'assets/img/bedroomC/BedroomC3_thumb.webp', title: 'CedroomC', text: 'Third bedroom', full: 'assets/img/bedroomC/BedroomC3.webp' },
-      { src: 'assets/img/bedroomC/BedroomC4_thumb.webp', title: 'CedroomC', text: 'Third bedroom', full: 'assets/img/bedroomC/BedroomC4.webp' },
-      { src: 'assets/img/bedroomC/BedroomC5_thumb.webp', title: 'CedroomC', text: 'Third bedroom', full: 'assets/img/bedroomC/BedroomC5.webp' }
+    bedroom: [{
+        src: 'assets/img/bedroomA/BedroomA1_thumb.webp',
+        title: 'BedroomA',
+        text: 'First bedroom',
+        full: 'assets/img/bedroomA/BedroomA1.webp'
+      },
+      {
+        src: 'assets/img/bedroomA/BedroomA2_thumb.webp',
+        title: 'BedroomA',
+        text: 'First bedroom',
+        full: 'assets/img/bedroomA/BedroomA2.webp'
+      },
+      {
+        src: 'assets/img/bedroomA/BedroomA3_thumb.webp',
+        title: 'BedroomA',
+        text: 'First bedroom',
+        full: 'assets/img/bedroomA/BedroomA3.webp'
+      },
+      {
+        src: 'assets/img/bedroomB/BedroomB1_thumb.webp',
+        title: 'BedroomB',
+        text: 'Second bedroom',
+        full: 'assets/img/bedroomB/BedroomB1.webp'
+      },
+      {
+        src: 'assets/img/bedroomB/BedroomB2_thumb.webp',
+        title: 'BedroomB',
+        text: 'Second bedroom',
+        full: 'assets/img/bedroomB/BedroomB2.webp'
+      },
+      {
+        src: 'assets/img/bedroomB/BedroomB3_thumb.webp',
+        title: 'BedroomB',
+        text: 'Second bedroom',
+        full: 'assets/img/bedroomB/BedroomB3.webp'
+      },
+      {
+        src: 'assets/img/bedroomC/BedroomC1_thumb.webp',
+        title: 'CedroomC',
+        text: 'Third bedroom',
+        full: 'assets/img/bedroomC/BedroomC1.webp'
+      },
+      {
+        src: 'assets/img/bedroomC/BedroomC2_thumb.webp',
+        title: 'CedroomC',
+        text: 'Third bedroom',
+        full: 'assets/img/bedroomC/BedroomC2.webp'
+      },
+      {
+        src: 'assets/img/bedroomC/BedroomC3_thumb.webp',
+        title: 'CedroomC',
+        text: 'Third bedroom',
+        full: 'assets/img/bedroomC/BedroomC3.webp'
+      },
+      {
+        src: 'assets/img/bedroomC/BedroomC4_thumb.webp',
+        title: 'CedroomC',
+        text: 'Third bedroom',
+        full: 'assets/img/bedroomC/BedroomC4.webp'
+      },
+      {
+        src: 'assets/img/bedroomC/BedroomC5_thumb.webp',
+        title: 'CedroomC',
+        text: 'Third bedroom',
+        full: 'assets/img/bedroomC/BedroomC5.webp'
+      }
     ],
-    bathroom: [
-      { src: 'assets/img/bathrooms/BathroomMain_thumb.webp', title: 'Outdoors', text: 'Main bathroom', full: 'assets/img/bathrooms/BathroomMain.webp' },
-      { src: 'assets/img/bathrooms/BathroomBeds_thumb.webp', title: 'Outdoors', text: 'Beds bathroom', full: 'assets/img/bathrooms/BathroomBeds.webp' }
+    bathroom: [{
+        src: 'assets/img/bathrooms/BathroomMain_thumb.webp',
+        title: 'Outdoors',
+        text: 'Main bathroom',
+        full: 'assets/img/bathrooms/BathroomMain.webp'
+      },
+      {
+        src: 'assets/img/bathrooms/BathroomBeds_thumb.webp',
+        title: 'Outdoors',
+        text: 'Beds bathroom',
+        full: 'assets/img/bathrooms/BathroomBeds.webp'
+      }
     ],
-    swimmingpool: [
-      { src: 'assets/img/swimmingpool/Swimmingpool1_thumb.webp', title: 'Swimmingpool', text: 'Aerial swimmingpool', full: 'assets/img/swimmingpool/Swimmingpool1.webp' },
-      { src: 'assets/img/swimmingpool/Swimmingpool2_thumb.webp', title: 'Swimmingpool', text: 'Aerial swimmingpool', full: 'assets/img/swimmingpool/Swimmingpool2.webp' },
-      { src: 'assets/img/swimmingpool/Swimmingpool3_thumb.webp', title: 'Swimmingpool', text: 'Aerial swimmingpool', full: 'assets/img/swimmingpool/Swimmingpool3.webp' },
-      { src: 'assets/img/swimmingpool/Swimmingpool4_thumb.webp', title: 'Swimmingpool', text: 'Aerial swimmingpool', full: 'assets/img/swimmingpool/Swimmingpool4.webp' },
-      { src: 'assets/img/swimmingpool/Swimmingpool5_thumb.webp', title: 'Swimmingpool', text: 'Aerial swimmingpool', full: 'assets/img/swimmingpool/Swimmingpool5.webp' }
+    swimmingpool: [{
+        src: 'assets/img/swimmingpool/Swimmingpool1_thumb.webp',
+        title: 'Swimmingpool',
+        text: 'Aerial swimmingpool',
+        full: 'assets/img/swimmingpool/Swimmingpool1.webp'
+      },
+      {
+        src: 'assets/img/swimmingpool/Swimmingpool2_thumb.webp',
+        title: 'Swimmingpool',
+        text: 'Aerial swimmingpool',
+        full: 'assets/img/swimmingpool/Swimmingpool2.webp'
+      },
+      {
+        src: 'assets/img/swimmingpool/Swimmingpool3_thumb.webp',
+        title: 'Swimmingpool',
+        text: 'Aerial swimmingpool',
+        full: 'assets/img/swimmingpool/Swimmingpool3.webp'
+      },
+      {
+        src: 'assets/img/swimmingpool/Swimmingpool4_thumb.webp',
+        title: 'Swimmingpool',
+        text: 'Aerial swimmingpool',
+        full: 'assets/img/swimmingpool/Swimmingpool4.webp'
+      },
+      {
+        src: 'assets/img/swimmingpool/Swimmingpool5_thumb.webp',
+        title: 'Swimmingpool',
+        text: 'Aerial swimmingpool',
+        full: 'assets/img/swimmingpool/Swimmingpool5.webp'
+      }
     ],
-    sportsarea: [
-      { src: 'assets/img/sportsarea/Sportsarea1_thumb.webp', title: 'Sportsarea', text: 'Aerial sportsarea', full: 'assets/img/sportsarea/Sportsarea1.webp' },
-      { src: 'assets/img/sportsarea/Sportsarea2_thumb.webp', title: 'Sportsarea', text: 'Aerial sportsarea', full: 'assets/img/sportsarea/Sportsarea2.webp' }
+    sportsarea: [{
+        src: 'assets/img/sportsarea/Sportsarea1_thumb.webp',
+        title: 'Sportsarea',
+        text: 'Aerial sportsarea',
+        full: 'assets/img/sportsarea/Sportsarea1.webp'
+      },
+      {
+        src: 'assets/img/sportsarea/Sportsarea2_thumb.webp',
+        title: 'Sportsarea',
+        text: 'Aerial sportsarea',
+        full: 'assets/img/sportsarea/Sportsarea2.webp'
+      }
     ],
-    kidscastle: [
-      { src: 'assets/img/kidscastle/Kidscastle1_thumb.webp', title: 'Kidscastle', text: 'Aerial kidscastle', full: 'assets/img/kidscastle/Kidscastle1.webp' },
-      { src: 'assets/img/kidscastle/Kidscastle2_thumb.webp', title: 'Kidscastle', text: 'Aerial kidscastle', full: 'assets/img/kidscastle/Kidscastle2.webp' }
+    kidscastle: [{
+        src: 'assets/img/kidscastle/Kidscastle1_thumb.webp',
+        title: 'Kidscastle',
+        text: 'Aerial kidscastle',
+        full: 'assets/img/kidscastle/Kidscastle1.webp'
+      },
+      {
+        src: 'assets/img/kidscastle/Kidscastle2_thumb.webp',
+        title: 'Kidscastle',
+        text: 'Aerial kidscastle',
+        full: 'assets/img/kidscastle/Kidscastle2.webp'
+      }
     ]
     // Completa las demás categorías
   };
@@ -278,10 +658,13 @@
     if (swiper) swiper.destroy(true, true);
     swiper = new Swiper('.portfolio-slider', {
       slidesPerView: 1.2,
-      loop:true,
+      loop: true,
       centeredSlides: true,
       spaceBetween: 10,
-      pagination: { el: '.swiper-pagination', type: 'fraction'},
+      pagination: {
+        el: '.swiper-pagination',
+        type: 'fraction'
+      },
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev'
@@ -290,9 +673,11 @@
 
     // Reiniciar lightbox
     if (window.glightbox) glightbox.destroy();
-    window.glightbox = GLightbox({ selector: '.glightbox' });
+    window.glightbox = GLightbox({
+      selector: '.glightbox'
+    });
   }
-  
+
   document.getElementById('slider-category').addEventListener('change', (e) => {
     renderSlides(e.target.value);
   });
@@ -302,14 +687,14 @@
     renderSlides('all');
   });
 
-  
-  
+
+
 
   /**
    * Init swiper sliders
    */
   function initSwiper() {
-    document.querySelectorAll(".init-swiper").forEach(function(swiperElement) {
+    document.querySelectorAll(".init-swiper").forEach(function (swiperElement) {
       let config = JSON.parse(
         swiperElement.querySelector(".swiper-config").innerHTML.trim()
       );
@@ -327,7 +712,7 @@
   /**
    * Correct scrolling position upon page load for URLs containing hash links.
    */
-  window.addEventListener('load', function(e) {
+  window.addEventListener('load', function (e) {
     if (window.location.hash) {
       if (document.querySelector(window.location.hash)) {
         setTimeout(() => {
@@ -364,7 +749,71 @@
   window.addEventListener('load', navmenuScrollspy);
   document.addEventListener('scroll', navmenuScrollspy);
 
+
+  /**
+   * Calendar
+   */
+
+  const occupiedRanges = [{
+    from: "2025-01-01",
+    to: "2025-10-28"
+  }];
+
+
   document.addEventListener("DOMContentLoaded", function () {
+    // Calendario del contact us
+
+    const minNights = 3; // Estancia mínima - Minimo numero de noches
+    let currentCheckInDate = null;
+    const today = new Date();
+    const maxDate = new Date(today.getFullYear() + 1, 11, 31);
+
+    // 1. Check-out picker con onDayCreate para resaltar el check-in
+    const checkOutPicker = flatpickr("#check-out", {
+      dateFormat: "Y-m-d",
+      disable: occupiedRanges,
+      minDate: "today",
+      maxDate: maxDate,
+      position: "below",
+      onDayCreate: function (dObj, dStr, fp, dayElem) {
+        if (currentCheckInDate) {
+          const checkInISO = currentCheckInDate.toISOString().slice(0, 10);
+          const dayISO = dayElem.dateObj.toISOString().slice(0, 10);
+          if (dayISO === checkInISO) {
+            dayElem.classList.add("checkin-highlight");
+          }
+        }
+      }
+    });
+
+    // 2. Check-in picker
+    const checkInPicker = flatpickr("#check-in", {
+      dateFormat: "Y-m-d",
+      disable: occupiedRanges,
+      minDate: "today",
+      maxDate: maxDate,
+      position: "below",
+      onChange: function (selectedDates) {
+        if (selectedDates.length > 0) {
+          currentCheckInDate = selectedDates[0];
+          const minCheckoutDate = new Date(selectedDates[0]);
+          minCheckoutDate.setDate(minCheckoutDate.getDate() + minNights);
+
+          checkOutPicker.set("minDate", minCheckoutDate);
+          checkOutPicker.open();
+        }
+      }
+    });
+
+
+    // Calendario del componente availability
+    const occupiedEvents = occupiedRanges.map(range => ({
+      start: range.from,
+      end: range.to,
+      display: "background",
+      color: "#ffb3b3"
+    }));
+
     const calendarEl = document.getElementById("calendar");
 
     const isMobile = window.innerWidth <= 768;
@@ -380,21 +829,67 @@
       views: {
         multiMonthThreeMonth: {
           type: "multiMonth",
-          duration: { months: 3 },
+          duration: {
+            months: 3
+          },
         },
       },
-      events: [
-        {
-          start: "2025-05-01",
-          end: "2025-10-27",
-          display: "background",
-          color: "#ffb3b3",
-        },
-      ],
+      events: occupiedEvents,
     });
 
     calendar.render();
   });
-  
+
+  /* --------------
+  * Contact form - prices
+  --------------  */
+  const dailyPrices = {
+    '2025-01': 200,
+    '2025-02': 200,
+    '2025-03': 200,
+    '2025-04': 200,
+    '2025-05': 200,
+    '2025-06': 250,
+    '2025-07': 300,
+    '2025-08': 350,
+    '2025-09': 250,
+    '2025-10': 200,
+    '2025-11': 200,
+    '2025-12': 200
+  };
+
+  function getPriceForDate(dateStr) {
+    // dateStr: '2025-05-23'
+    const key = dateStr.slice(0, 7); // '2025-05'
+    return dailyPrices[key] || 0; // Devuelve 0 si no hay precio definido
+  }
+
+  function calculateTotalPrice(start, end) {
+    if (!start || !end) return 0;
+    const startDate = new Date(start);
+    const endDate = new Date(end);
+    let total = 0;
+    let current = new Date(startDate);
+
+    // Suma precios por cada día de estancia (sin incluir el día de salida)
+    while (current < endDate) {
+      const iso = current.toISOString().slice(0, 10); // 'YYYY-MM-DD'
+      total += getPriceForDate(iso);
+      current.setDate(current.getDate() + 1);
+    }
+    return total;
+  }
+
+  const checkIn = document.getElementById('check-in');
+  const checkOut = document.getElementById('check-out');
+  const priceField = document.getElementById('price-field');
+
+  function updatePrice() {
+    const total = calculateTotalPrice(checkIn.value, checkOut.value);
+    priceField.value = total > 0 ? `${total}€` : '';
+  }
+
+  checkIn.addEventListener('change', updatePrice);
+  checkOut.addEventListener('change', updatePrice);
 
 })();
