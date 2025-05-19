@@ -639,7 +639,6 @@
         full: 'assets/img/kidscastle/Kidscastle2.webp'
       }
     ]
-    // Completa las demás categorías
   };
 
   const swiperWrapper = document.getElementById('portfolio-swiper-wrapper');
@@ -891,5 +890,34 @@
 
   checkIn.addEventListener('change', updatePrice);
   checkOut.addEventListener('change', updatePrice);
+
+
+  /*
+  About us swiper
+  */
+   // Wait for DOM to load
+  document.addEventListener("DOMContentLoaded", function () {
+    const isMobile = window.innerWidth < 992;
+    if (isMobile) {
+      const boxes = document.querySelectorAll("#iconBoxes .icon-box");
+      const wrapper = document.getElementById("iconBoxSwiperWrapper");
+
+      boxes.forEach((box) => {
+        const slide = document.createElement("div");
+        slide.className = "swiper-slide";
+        slide.appendChild(box.cloneNode(true)); // Clone the content
+        wrapper.appendChild(slide);
+      });
+
+      new Swiper(".about-swiper", {
+        loop: false,
+        spaceBetween: 30,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+    }
+  });
 
 })();

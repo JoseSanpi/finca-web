@@ -1027,6 +1027,13 @@ section,
 /*--------------------------------------------------------------
 # About Section
 --------------------------------------------------------------*/
+.about-swiper .swiper-slide {
+  background: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
 .about .content {
   max-width: 30%;
   /* Esto limita el ancho de la columna */
@@ -1120,6 +1127,19 @@ section,
 #services {
   padding-top: 0px;
   /* Reducir el padding superior */
+}
+
+
+.about-swiper .swiper-pagination {
+  bottom: 0 !important;
+  position: relative;
+  margin-top: 1rem;
+}
+
+@media (max-width: 991px) {
+  .about .content p:last-of-type {
+    margin-bottom: 0rem; /* o 0 si quieres eliminarlo completamente */
+  }
 }
 
 /*--------------------------------------------------------------
