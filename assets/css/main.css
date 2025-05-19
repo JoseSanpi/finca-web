@@ -248,6 +248,7 @@ h6 {
   .navmenu .active:focus {
     color: var(--contrast-color);
     background-color: var(--nav-hover-color);
+    border-radius: 6px;
   }
 
   .navmenu .dropdown ul {
@@ -308,9 +309,9 @@ h6 {
   }
 
   .navmenu .contact-cta {
-    background-color: var(--nav-hover-color);
+    background-color: var(--background-color);
     color: var(--contrast-color) !important;
-    border: 2px solid var(--contrast-color);
+    border: 1px solid var(--contrast-color);
     border-radius: 6px;
     padding: 10px 22px;
     margin-left: 10px;
