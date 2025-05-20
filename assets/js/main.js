@@ -915,6 +915,7 @@
         pagination: {
           el: ".swiper-pagination",
           clickable: true,
+          type: 'progressbar'
         },
       });
     }

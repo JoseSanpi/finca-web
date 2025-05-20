@@ -1140,6 +1140,15 @@ section,
   .about .content p:last-of-type {
     margin-bottom: 0rem; /* o 0 si quieres eliminarlo completamente */
   }
+
+  .about-swiper .swiper-pagination-progressbar {
+    width: 30%;
+    margin: 20px auto;
+  }
+
+  .about-swiper .swiper-pagination-progressbar-fill {
+  background-color: var(--accent-color); /* O pon un color fijo como #E67E22 */
+}
 }
 
 /*--------------------------------------------------------------
