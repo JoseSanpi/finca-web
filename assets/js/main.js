@@ -5,6 +5,7 @@
  * Author: BootstrapMade.com
  * License: https://bootstrapmade.com/license/
  */
+import { occupiedRanges, dailyPrices } from './data.js';
 
 (function () {
   "use strict";
@@ -154,11 +155,9 @@
 
   });
 
-
   /**
    * Swiper mobile
    */
-
 
   const portfolioImages = {
     all: [{
@@ -750,18 +749,12 @@
 
 
   /**
-   * Calendar
+   * Calendar / Availability
    */
 
-  const occupiedRanges = [{
-    from: "2025-01-01",
-    to: "2025-10-28"
-  }];
-
-
   document.addEventListener("DOMContentLoaded", function () {
-    // Calendario del contact us
 
+    // Calendario del contact us
     const minNights = 3; // Estancia mínima - Minimo numero de noches
     let currentCheckInDate = null;
     const today = new Date();
@@ -805,7 +798,6 @@
     });
 
 
-    // Calendario del componente availability
     const occupiedEvents = occupiedRanges.map(range => ({
       start: range.from,
       end: range.to,
@@ -815,47 +807,64 @@
 
     const calendarEl = document.getElementById("calendar");
 
-    const isMobile = window.innerWidth <= 768;
+    let calendar; // Definimos la variable fuera para reutilizarla
 
-    const calendar = new FullCalendar.Calendar(calendarEl, {
-      initialView: isMobile ? "dayGridMonth" : "multiMonthThreeMonth",
-      height: "auto",
-      headerToolbar: {
-        left: "prev",
-        center: "title",
-        right: "next",
-      },
-      views: {
-        multiMonthThreeMonth: {
-          type: "multiMonth",
-          duration: {
-            months: 3
-          },
+    function renderCalendar() {
+      const viewportWidth = window.innerWidth;
+      let initialView = "multiMonthThreeMonth";
+
+      if (viewportWidth <= 1000) {
+        initialView = "dayGridMonth";
+      } else if (viewportWidth < 1400) {
+        initialView = "multiMonthTwoMonth";
+      }
+
+      // Si ya hay un calendario, lo destruimos antes de crear uno nuevo
+      if (calendar) {
+        calendar.destroy();
+      }
+
+      calendar = new FullCalendar.Calendar(calendarEl, {
+        initialView: initialView,
+        height: "auto",
+        headerToolbar: {
+          left: "prev",
+          center: "title",
+          right: "next",
         },
-      },
-      events: occupiedEvents,
+        views: {
+          multiMonthThreeMonth: {
+            type: "multiMonth",
+            duration: {
+              months: 3
+            }
+          },
+          multiMonthTwoMonth: {
+            type: "multiMonth",
+            duration: {
+              months: 2
+            }
+          }
+        },
+        events: occupiedEvents,
+      });
+
+      calendar.render();
+    }
+
+    // Llamamos inicialmente
+    renderCalendar();
+
+    // Escuchamos cambios de tamaño de la ventana
+    window.addEventListener("resize", function () {
+      renderCalendar();
     });
 
-    calendar.render();
   });
 
   /* --------------
   * Contact form - prices
   --------------  */
-  const dailyPrices = {
-    '2025-01': 200,
-    '2025-02': 200,
-    '2025-03': 200,
-    '2025-04': 200,
-    '2025-05': 200,
-    '2025-06': 250,
-    '2025-07': 300,
-    '2025-08': 350,
-    '2025-09': 250,
-    '2025-10': 200,
-    '2025-11': 200,
-    '2025-12': 200
-  };
 
   function getPriceForDate(dateStr) {
     // dateStr: '2025-05-23'
@@ -895,7 +904,7 @@
   /*
   About us swiper
   */
-   // Wait for DOM to load
+  // Wait for DOM to load
   document.addEventListener("DOMContentLoaded", function () {
     const isMobile = window.innerWidth < 992;
     if (isMobile) {
