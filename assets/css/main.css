@@ -1018,6 +1018,65 @@ section,
   opacity: 0.7;
 }
 
+.flatpickr-calendar .flatpickr-day.min-nights-blocked {
+  position: relative;
+}
+
+.flatpickr-calendar .flatpickr-day.min-nights-blocked:hover::after {
+  content: "3 nights min";
+  position: absolute;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+  z-index: 1000;
+  pointer-events: none;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Tooltip hacia abajo para las primeras 2 filas (días 1-14) */
+.flatpickr-calendar .flatpickr-day.min-nights-blocked.tooltip-down:hover::after {
+  top: 100%;
+  margin-top: 8px;
+}
+
+.flatpickr-calendar .flatpickr-day.min-nights-blocked.tooltip-down:hover::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 2px;
+  border: 6px solid transparent;
+  border-bottom-color: rgba(0, 0, 0, 0.8);
+  z-index: 1001;
+  pointer-events: none;
+}
+
+/* Tooltip hacia arriba para el resto de días */
+.flatpickr-calendar .flatpickr-day.min-nights-blocked.tooltip-up:hover::after {
+  bottom: 100%;
+  margin-bottom: 8px;
+}
+
+.flatpickr-calendar .flatpickr-day.min-nights-blocked.tooltip-up:hover::before {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 2px;
+  border: 6px solid transparent;
+  border-top-color: rgba(0, 0, 0, 0.8);
+  z-index: 1001;
+  pointer-events: none;
+}
+
 /*--------------------------------------------------------------
 # About Section
 --------------------------------------------------------------*/

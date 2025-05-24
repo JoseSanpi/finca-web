@@ -756,49 +756,79 @@ import { occupiedRanges, dailyPrices, minNights} from './data.js';
   document.addEventListener("DOMContentLoaded", function () {
 
     // Calendario del contact us
-    const minNights = 3; // Estancia mínima - Minimo numero de noches
-    let currentCheckInDate = null;
-    const today = new Date();
-    const maxDate = new Date(today.getFullYear() + 1, 11, 31);
+let currentCheckInDate = null;
+const today = new Date();
+const maxDate = new Date(today.getFullYear() + 1, 11, 31);
 
-    // 1. Check-out picker con onDayCreate para resaltar el check-in
-    const checkOutPicker = flatpickr("#check-out", {
-      dateFormat: "Y-m-d",
-      disable: occupiedRanges,
-      minDate: "today",
-      maxDate: maxDate,
-      position: "below",
-      onDayCreate: function (dObj, dStr, fp, dayElem) {
-        if (currentCheckInDate) {
-          const checkInISO = currentCheckInDate.toISOString().slice(0, 10);
-          const dayISO = dayElem.dateObj.toISOString().slice(0, 10);
-          if (dayISO === checkInISO) {
-            dayElem.classList.add("checkin-highlight");
-          }
+// Función para determinar si un día está en las primeras 2 filas (días 1-14)
+function isInFirstTwoRows(dayElem) {
+  const dayNumber = parseInt(dayElem.textContent);
+  return dayNumber >= 1 && dayNumber <= 14;
+}
+
+// Función para verificar si un día está bloqueado por estancia mínima
+function isDayBlockedByMinNights(dayElem, checkInDate) {
+  if (!checkInDate) return false;
+  
+  const dayDate = dayElem.dateObj;
+  const minCheckoutDate = new Date(checkInDate);
+  minCheckoutDate.setDate(minCheckoutDate.getDate() + minNights);
+  
+  return dayDate > checkInDate && dayDate < minCheckoutDate;
+}
+
+// 1. Check-out picker con onDayCreate para resaltar el check-in y añadir tooltips
+const checkOutPicker = flatpickr("#check-out", {
+  dateFormat: "Y-m-d",
+  disable: occupiedRanges,
+  minDate: "today",
+  maxDate: maxDate,
+  position: "below",
+  onDayCreate: function (dObj, dStr, fp, dayElem) {
+    // Resaltar día de check-in
+    if (currentCheckInDate) {
+      const checkInISO = currentCheckInDate.toISOString().slice(0, 10);
+      const dayISO = dayElem.dateObj.toISOString().slice(0, 10);
+      if (dayISO === checkInISO) {
+        dayElem.classList.add("checkin-highlight");
+      }
+      
+      // Añadir clase y tooltip para días bloqueados por estancia mínima
+      if (isDayBlockedByMinNights(dayElem, currentCheckInDate)) {
+        dayElem.classList.add("min-nights-blocked");
+        
+        // Determinar dirección del tooltip
+        if (isInFirstTwoRows(dayElem)) {
+          dayElem.classList.add("tooltip-down");
+        } else {
+          dayElem.classList.add("tooltip-up");
         }
       }
-    });
+    }
+  }
+});
 
-    // 2. Check-in picker
-    const checkInPicker = flatpickr("#check-in", {
-      dateFormat: "Y-m-d",
-      disable: occupiedRanges,
-      minDate: "today",
-      maxDate: maxDate,
-      position: "below",
-      onChange: function (selectedDates) {
-        if (selectedDates.length > 0) {
-          currentCheckInDate = selectedDates[0];
-          const minCheckoutDate = new Date(selectedDates[0]);
-          minCheckoutDate.setDate(minCheckoutDate.getDate() + minNights);
+// 2. Check-in picker
+const checkInPicker = flatpickr("#check-in", {
+  dateFormat: "Y-m-d",
+  disable: occupiedRanges,
+  minDate: "today",
+  maxDate: maxDate,
+  position: "below",
+  onChange: function (selectedDates) {
+    if (selectedDates.length > 0) {
+      currentCheckInDate = selectedDates[0];
+      const minCheckoutDate = new Date(selectedDates[0]);
+      minCheckoutDate.setDate(minCheckoutDate.getDate() + minNights);
 
-          checkOutPicker.set("minDate", minCheckoutDate);
-          checkOutPicker.open();
-        }
-      }
-    });
+      checkOutPicker.set("minDate", minCheckoutDate);
+      checkOutPicker.open();
+    }
+  }
+});
 
 
+    // Calendario del availability
     const occupiedEvents = occupiedRanges.map(range => ({
       start: range.from,
       end: range.to,
