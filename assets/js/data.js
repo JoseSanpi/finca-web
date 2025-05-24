@@ -36,3 +36,6 @@ export const dailyPrices = {
     '2026-11': 200,
     '2026-12': 200
   };
+
+  // Minimo de noches
+  export const minNights = 3;

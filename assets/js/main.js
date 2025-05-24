@@ -5,7 +5,8 @@
  * Author: BootstrapMade.com
  * License: https://bootstrapmade.com/license/
  */
-import { occupiedRanges, dailyPrices } from './data.js';
+
+import { occupiedRanges, dailyPrices, minNights} from './data.js';
 
 (function () {
   "use strict";
