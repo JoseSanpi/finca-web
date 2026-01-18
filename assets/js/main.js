@@ -759,7 +759,9 @@ import {
 
   document.addEventListener("DOMContentLoaded", function () {
 
-    // Calendario del contact us
+    /**
+     * Calendario del contact us
+     */
     let currentCheckInDate = null;
     const today = new Date();
     const maxDate = new Date(today.getFullYear() + 1, 11, 31);
@@ -831,8 +833,9 @@ import {
       }
     });
 
-
-    // Calendario del availability
+    /**
+     * Calendario del availability
+     */
     const occupiedEvents = occupiedRanges.map(range => ({
       start: range.from,
       end: range.to,
