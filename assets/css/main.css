@@ -1118,7 +1118,7 @@ section,
   }
 }
 
-.about .content h3 {
+.about .content h2 {
   font-weight: 700;
   font-size: 34px;
   margin-bottom: 30px;
@@ -1605,6 +1605,12 @@ section,
   bottom: -20px;
   left: calc(50% - 20px);
 }
+
+.testimonials .swiper {
+  min-height: 360px;
+  max-height: 420px;
+}
+
 
 .testimonials .swiper-wrapper {
   height: auto;
