@@ -1606,11 +1606,17 @@ section,
   left: calc(50% - 20px);
 }
 
-.testimonials .swiper {
+/* Lo comento porque rompe los comentarios
+/* .testimonials .swiper {
   min-height: 360px;
   max-height: 420px;
-}
+} */
 
+/* Quizá en algun momento usar esto para que los comentarios demasiado largos aparezcasn recortados y con un slider para bajar a verlo entero.
+/* .testimonial-item {
+  max-height: 420px;
+  overflow: auto;
+} */
 
 .testimonials .swiper-wrapper {
   height: auto;
